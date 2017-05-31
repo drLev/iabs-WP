@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/screen-16x10.css">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/my.css">
+<body class="shower list">
+	<header class="caption">
+		<h1>Shower Presentation Engine</h1>
+		<p>Yours Truly, Famous Inc.</p>
+	</header>
+	<section class="slide" id="cover">
+		<h2>День 9</h2>
+		<img src="pictures/iabs2.jpg" alt="" class="cover">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+		-->
+		<style>
+			#cover {
+				background-color: #FEDB37;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+		</style>
+	</section>
+	<section class="slide">
+		<h2>Тесты</h2>
+		<pre>
+			<code>
+$arr = array("f");
+foreach($arr as &$v) {
+	$v = "g";
+}
+echo $arr[0];
+		</code>	
+	</pre>
+</section>
+<section class="slide">
+	<h2>Тесты</h2>
+	<pre><code>
+$arr = array("f");
+foreach($arr as $k => $v) {
+	$arr[$k] = "g";
+}
+echo $arr[0];
+</code></pre>
+</section>	
+<section class="slide">
+	<h2>Тесты</h2>
+	<pre><code>
+$arr = array("f");
+foreach($arr as $v) {
+	$v = "g";
+}
+echo $arr[0];
+</code></pre>
+</section>	
+<section class="slide">
+	<h2>Тесты</h2>
+    <pre><code>
+require 'functions.php';
+$a = 100;
+echo some_function($a);
+
+</code></pre>
+</section>	
+<section class="slide">
+	<h2>Тесты</h2>
+	<ul>
+		<li class="next">Что такое рекурсия?</li>
+		<li class="next">Что такое кукисы?</li>
+		<li class="next">Что такое сесиии?</li>
+		<li class="next">В чем разница между кукисами и сессиями?</li>
+		<li class="next">Что такое авторизация?</li>
+		<li class="next">Что такое аутентификация?</li>
+	</ul>
+</section>	
+
+<section class="slide">
+	<h2>Тесты</h2>
+	<ol>
+		<li class="next">a {...}</li>
+		<li class="next">.a {...}</li>
+		<li class="next">#a {...}</li>
+		<li class="next">#a a{...}</li>
+		<li class="next">.a #a{...}</li>
+		<li class="next">.main {...}</li>
+	</ol>
+</section>	
+<section class="slide">
+	<h2>Тесты</h2>
+	<ol>
+		<li>.main > div {...}</li>
+		<li class="next">.second div {...}</li>
+		<li class="next">.third > .block {...}</li>
+		<li class="next">.main+div {...}</li>
+		<li class="next">div+p {...}</li>
+		<li class="next">a[href] {...}</li>
+		</ol>
+	</section>	
+	<section class="slide" id="yellow-cube">
+	<style>
+		#yellow-cube>div {
+			width: 300px;
+			height: 100px;
+			background-color: #FEDB37;
+			margin-top: 20px;
+		}
+	</style>
+		<h2>Тесты</h2>
+		<div></div>
+		<div></div>
+		<div></div>	
+		</section>
+	<section class="slide" id="yellow-string">
+	<style>
+		#yellow-string>span {
+			background-color: #FEDB37;
+			margin-left: 20px;
+			padding-left: 200px;
+		}
+	</style>
+		<h2>Тесты</h2>
+		<span></span>
+		<span></span>
+		<span></span>
+		</section>		
+	<section class="slide" >
+	<h2>Какой селектор более специфичный?</h2>
+	<ul>
+		<li>ul - #id</li>
+		<li class="next">div a - .main</li>
+		<li class="next">#main - .main</li>
+		<li class="next">a[href] - .main</li>
+		<li class="next">#id - .main li</li>
+		<li class="next">ul li - div a</li>
+	</ul>
+
+	</section>	
+	<section class="slide">
+		<h2>Что делают эти свойства?</h2>
+		<ol>
+			<li>font-weight</li>
+			<li class="next">text-align</li>
+			<li class="next">text-decoration</li>
+			<li class="next">font-family</li>			
+			<li class="next">@font-face</li>
+			<li class="next">line-height</li>
+		</ol>
+	</section>	
+	<section class="slide">
+		<h2>Таблицы</h2>
+		<pre>
+		<code>
+&lt;table&gt; 
+	&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;	
+		</code>	
+		</pre>
+	</section>	
+	<section class="slide black" id="cover-php">
+		<style>
+		#cover-php h2 {
+			color: rgba(255, 255, 255, .7);
+		}
+		</style>
+		<h2 class="shout">PHP</h2>
+		<img src="pictures/code.jpg" alt="" class="cover">
+	</section>	
+	<section class="slide">
+		<h2>Параметры по умолчанию</h2>
+		<pre>
+<code>&lt;?php</code>
+<code>function test($a = "test") {</code>
+<code>	echo $a;</code>
+<code>}</code>
+<code>test(); <mark class="comment">//Выведет test</mark></code>
+<code>test("foo"); <mark class="comment">//Выведет foo</mark></code>
+</pre>
+	</section>
+	<section class="slide">
+		<h2>Параметры по умолчанию</h2>
+		<pre>
+<code>&lt;?php</code>
+<code>function test($a = "test", $b = "quest") {</code>
+<code>	echo $a . $b;</code>
+<code>}</code>
+<code>test(); <mark class="comment">//Выведет testquest</mark></code>
+<code>test("foo"); <mark class="comment">//Выведет fooquest</mark></code>
+		</pre>
+	</section>	
+	<section class="slide">
+		<h2>Анонимные фукнции</h2>
+		<pre>
+<code>&lt;?php</code>
+<code>$myvar = function ($a) {</code>
+<code>	echo $a;</code>
+<code>}</code>
+<code>$myvar("hello"); <mark class="comment">//Выведет hello</mark></code>
+<code>$myvar(" "); <mark class="comment">//Выведет " "</mark></code>
+<code>$myvar("world"); <mark class="comment">//Выведет world</mark></code>
+	</pre>
+	</section>	
+	<section class="slide">
+		<h2>Функции высшего порядка</h2>
+		<p>Могут принимать другие функции как аргументы.</p>
+		<p>Могуг возвращаться другие функции как аргументы.</p>
+		<p>PHP позволяет писать программы в функциональной парадигме, но это совсем другая история.</p>
+	</section>	
+	<section class="slide">
+		<h2>Применение функций высшего порядка</h2>
+		<pre>
+<code>function filter_array($arr, $filterFunct){</code>
+<code>	$result = array();</code>
+<code>	foreach($arr as $el) {</code>
+<code>		if ($filterFunct($el)) $result[] = $el;</code>
+<code>	}</code>
+<code>	return $result;</code>
+<code>}</code></pre>
+	</section>
+	<section class="slide">
+		<h2>Применение функций высшего порядка</h2>
+		<pre>
+		<code class="next">$filter1 = function($val){ return $val == 1;};</code>
+		<code class="next">$filter2 = function($val){ return $val == 2;};</code>
+		<code class="next">$filter3 = function($val){return $val != "."};</code>
+		<code class="next">var_dump(filter_array($arr, $filter1));</code>
+		<code class="next">var_dump(filter_array($arr, $filter2));</code>
+		<code class="next">var_dump(filter_array($arr, $filter3));</code>
+		</pre>
+	</section>	
+	<section class="slide">
+		<h2>Решение задачи в процедурном стиле</h2>
+		<p>Найти сумму цифр числа. Сумма 123 равняется 6.</p>
+		<pre>
+			<code>$number = "123";</code>
+			<code>$result = 0;</code>
+			<code>for($i = 0; $i < strlen($number); $i++) {</code>
+			<code>	$result += substr($number, $i, 1)</code>
+			<code>}</code>
+			<code>echo $result;</code>	
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Решение задачи в функциональном стиле</h2>
+		<p>Найти сумму цифр числа. Сумма 123 равняется 6.</p>
+		<pre>
+			<code>$number = "123";</code>
+			<code>echo array_sum(str_split($number));</code>	
+		</pre>
+	</section>	
+	<section class="slide">
+		<h2>Самостоятельно</h2>
+		<ul>
+			<li class="next">array_map</li>
+			<li class="next">array_reduce</li>
+			<li class="next">array_filter</li>
+			<li class="next">array_walk</li>
+			<li class="next">array_walk_recursive</li>
+			<li class="next">https://goo.gl/pVuuuX</li>
+		</ul>
+	</section>
+	<section class="slide black" id="cover-php">
+		<style>
+		#cover-php h2 {
+			color: rgba(255, 255, 255, .7);
+		}
+		</style>
+		<h2 class="shout">ООП</h2>
+		<img src="pictures/code.jpg" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<h2>Программирование ориентированное на объекты</h2>
+		<p>ООП - это не только программирование, но и проектирование</p>
+		<p class="next">Объект - сущность наделенная состоянием и поведением.</p>
+		<p class="next">Я - это объект. Моё поведение - это то, что я могу делать.</p>
+		<p class="next">Моё состояние - это все мои характеристики, к примеру возраст или пол(надеюсь это константа).</p>
+		<p class="next">Программа - это взаимодействие различных объектов.</p>
+	</section>	
+	<section class="slide">
+		<h2>Методы и свойства</h2>
+		<p>Свойста(атрибуты, поля) - это переменные или константы, которыми обладает объект. Мои свойства - возраст, пол, семейное положение.</p>
+		<p class="next"> Методы - это функции объекта, то что объект может делать.</p>
+		<p class="next">Кот Барсик - это объект. Его свойства или атрибуты - цвет и возраст. Его методы -  есть, пить, мяукать.</p>
+	</section>
+	<section class="slide">
+			<h2>ООП - это развитие процедурного стиля</h2>
+
+	</section>	
+		<p class="badge">.
+			<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+		</p>
+	<!--
+		To hide progress bar from entire presentation
+		just remJove “progress” element.
+	-->
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
