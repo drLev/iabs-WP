@@ -75,7 +75,7 @@ echo some_function($a);
 <section class="slide">
 	<h2>Тесты</h2>
 	<ul>
-		<li class="next">Что такое рекурсия?</li>
+		<li>Что такое рекурсия?</li>
 		<li class="next">Что такое кукисы?</li>
 		<li class="next">Что такое сесиии?</li>
 		<li class="next">В чем разница между кукисами и сессиями?</li>
@@ -87,7 +87,7 @@ echo some_function($a);
 <section class="slide">
 	<h2>Тесты</h2>
 	<ol>
-		<li class="next">a {...}</li>
+		<li>a {...}</li>
 		<li class="next">.a {...}</li>
 		<li class="next">#a {...}</li>
 		<li class="next">#a a{...}</li>
@@ -176,7 +176,26 @@ echo some_function($a);
 		</style>
 		<h2 class="shout">PHP</h2>
 		<img src="pictures/code.jpg" alt="" class="cover">
+	</section>
+	<section class="slide">
+			<h2>Функция header</h2>
+			<pre>
+			<code>&lt;php</code>
+			<code>header("test: gg");</code>
+			</pre>
+		</section>	
+	<section class="slide">
+		<h2>Результат</h2>
+		<img src="pictures/header_func.png" alt="">
 	</section>	
+	<section class="slide">
+		<h2>Использование</h2>
+		<pre>
+		<code>&lt;php</code>
+		<code><mark class="comment">//Браузер перейдет на другую страницу</mark></code>
+		<code>header("Location: auth.php");</code>
+		</pre>
+	</section>
 	<section class="slide">
 		<h2>Параметры по умолчанию</h2>
 		<pre>
@@ -184,8 +203,8 @@ echo some_function($a);
 <code>function test($a = "test") {</code>
 <code>	echo $a;</code>
 <code>}</code>
-<code>test(); <mark class="comment">//Выведет test</mark></code>
-<code>test("foo"); <mark class="comment">//Выведет foo</mark></code>
+<code class="next">test(); <mark class="comment">//Выведет test</mark></code>
+<code class="next">test("foo"); <mark class="comment">//Выведет foo</mark></code>
 </pre>
 	</section>
 	<section class="slide">
@@ -195,8 +214,8 @@ echo some_function($a);
 <code>function test($a = "test", $b = "quest") {</code>
 <code>	echo $a . $b;</code>
 <code>}</code>
-<code>test(); <mark class="comment">//Выведет testquest</mark></code>
-<code>test("foo"); <mark class="comment">//Выведет fooquest</mark></code>
+<code class="next">test(); <mark class="comment">//Выведет testquest</mark></code>
+<code class="next">test("foo"); <mark class="comment">//Выведет fooquest</mark></code>
 		</pre>
 	</section>	
 	<section class="slide">
@@ -207,8 +226,8 @@ echo some_function($a);
 <code>	echo $a;</code>
 <code>}</code>
 <code>$myvar("hello"); <mark class="comment">//Выведет hello</mark></code>
-<code>$myvar(" "); <mark class="comment">//Выведет " "</mark></code>
-<code>$myvar("world"); <mark class="comment">//Выведет world</mark></code>
+<code class="next">$myvar(" "); <mark class="comment">//Выведет " "</mark></code>
+<code class="next">$myvar("world"); <mark class="comment">//Выведет world</mark></code>
 	</pre>
 	</section>	
 	<section class="slide">
@@ -223,7 +242,7 @@ echo some_function($a);
 <code>function filter_array($arr, $filterFunct){</code>
 <code>	$result = array();</code>
 <code>	foreach($arr as $el) {</code>
-<code>		if ($filterFunct($el)) $result[] = $el;</code>
+<code>		<mark class="important">if ($filterFunct($el)) $result[] = $el;</mark></code>
 <code>	}</code>
 <code>	return $result;</code>
 <code>}</code></pre>
@@ -231,7 +250,7 @@ echo some_function($a);
 	<section class="slide">
 		<h2>Применение функций высшего порядка</h2>
 		<pre>
-		<code class="next">$filter1 = function($val){ return $val == 1;};</code>
+		<code>$filter1 = function($val){ return $val == 1;};</code>
 		<code class="next">$filter2 = function($val){ return $val == 2;};</code>
 		<code class="next">$filter3 = function($val){return $val != "."};</code>
 		<code class="next">var_dump(filter_array($arr, $filter1));</code>
@@ -262,7 +281,7 @@ echo some_function($a);
 	<section class="slide">
 		<h2>Самостоятельно</h2>
 		<ul>
-			<li class="next">array_map</li>
+			<li>array_map</li>
 			<li class="next">array_reduce</li>
 			<li class="next">array_filter</li>
 			<li class="next">array_walk</li>
@@ -284,8 +303,7 @@ echo some_function($a);
 		<p>ООП - это не только программирование, но и проектирование</p>
 		<p class="next">Объект - сущность наделенная состоянием и поведением.</p>
 		<p class="next">Я - это объект. Моё поведение - это то, что я могу делать.</p>
-		<p class="next">Моё состояние - это все мои характеристики, к примеру возраст или пол(надеюсь это константа).</p>
-		<p class="next">Программа - это взаимодействие различных объектов.</p>
+		<p class="next">Моё состояние - это все мои характеристики, к примеру возраст или пол</p>
 	</section>	
 	<section class="slide">
 		<h2>Методы и свойства</h2>
@@ -294,10 +312,248 @@ echo some_function($a);
 		<p class="next">Кот Барсик - это объект. Его свойства или атрибуты - цвет и возраст. Его методы -  есть, пить, мяукать.</p>
 	</section>
 	<section class="slide">
-			<h2>ООП - это развитие процедурного стиля</h2>
-
+		<h2>Литература</h2>
+		<ul>
+			<li>«Объектно-ориентированный анализ и проектирование с примерами приложений», Гради Буч</li>
+			<li>PHP. Объекты, шаблоны и методики программирования, 	Мэт Зандстра</li>
+			<li><a href="https://medium.com/@annacherenshchykova/-98ffef738f1d">Шпаргалка</a></li>
+			<li><a href="https://habrahabr.ru/post/87119/">Хоть что-то</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Принципы ООП</h2>
+		<ul>
+			<li>Инкапсуляция</li>
+			<li>Наследование</li>
+			<li>Полиморфизм</li>
+			<li>*Абстра́кция</li>
+			<li>*Передача сообщений</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Инкапсуляция</h2>
+		<p style="text-align: center;">
+			<img src="pictures/incapsulation.gif" alt="">
+		</p>
+	</section>
+	<section class="slide">
+		<h2>Наследование</h2>
+		<p style="text-align: center;">
+			<img src="pictures/extends.gif" alt="">
+		</p>
+	</section>
+	<section class="slide">
+		<h2>Полиморфизм</h2>
+		<p>Способность потомков выполнять работу предков по-своему.</p>
+		<p>Я унаcледовал от отца метод идти. Но я это делаю другим образом, с другой ноги и другой походкой.</p>
+	</section>
+	<section class="slide">
+		<h2>Абстракция и передача сообщений</h2>
+		<p>Абстракция - выделение значимых характеристик объекта.</p>
+		<p>Передача сообщений - вызовы одним объектом методов другого. Объект я может вызвать метод включить ноутбук у объекта ноутбук, тем самым передав сообщение.</p>
 	</section>	
-		<p class="badge">.
+	<section class="slide">
+			<h2>ООП - это развитие процедурного стиля</h2>
+			<pre>
+			<code><mark class="comment">//Данные отдельно - код отдельно</mark></code>
+			<code>$user = array("name" => "vasya");</code>
+			<code class="next">user_update($user, $new_data);</code>
+			<code class="next">user_delete($user);</code>
+			</pre>
+	</section>	
+	<section class="slide">
+		<h2>Почему бы не облегчить себе жизнь?</h2>
+		<pre>
+			<code>$userObj = new User("vasya");</code>
+			<code class="next">$userObj->update($newData);</code>
+			<code class="next">$userObj->delete();</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Класс и объект</h2>
+		<center><img src="pictures/class_object.jpg" alt=""></center>
+	</section>
+	<section class="slide">
+		<h2>Синтаксис</h2>
+		<pre>
+		<code>class Cat {</code>
+		<code>   public $name;</code>
+		<code>   function myau(){</code>
+		<code>       echo "myau";</code>
+		<code>   }</code>
+		<code>}</code>
+		<code class="next">$cat = new Cat();</code>
+		<code class="next">$cat2 = new Cat(); $cat2->myau();</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Задачи</h2>
+		<p>Создать классы и их объекты, присвоить значения:</p>
+		<ul>
+			<li>Класс Кофеварка, с методом варить кофе и свойством Объем воды.</li>		
+			<li>Класс Пользователь, с полями имя, фамилия, отчество, почта и методом получить ФИО.</li>
+</section>
+	<section class="slide">
+		<h2>Конструктор и $this</h2>
+		<pre>
+		<code>class Cat {</code>
+		<code>   public $name;</code>
+		<code>   function __construct($name){</code>
+		<code>       $this->name = $name;</code>
+		<code>   }</code>
+		<code>...</code>
+		</pre>		
+	</section>
+	<section class="slide">
+		<h2>Задачи</h2>
+		<p>Создать классы, атрибуты которых можно передавать в конструктор:</p>
+		<p>Класс Кот с атрибутами возраст и пол, а также методами мяукать и ходить.</p>
+		<p>Класс Статья с атрибутами название и автор и методом сохранить</p>
+	</section>
+	<section class="slide black">
+		<h2 class="shout">HTML&CSS</h2>
+		<img src="pictures/web_interfaces.jpg" class="cover">
+	</section>
+	<section class="slide">
+		<h2>Псевдоклассы</h2>
+		<pre><code>Селектор:Псевдокласс { Описание правил стиля }</code></pre>
+		<p>Псевдоклассы определяют динамическое состояние элементов, которое изменяется с помощью действий пользователя, а также положение в дереве документа. </p>
+	</section>
+	<section class="slide">
+		<h2>Псевдоклассы состояний гиперссылок</h2>
+		<pre>
+<code>#links-pseudo a:visited {color: green;}</code>
+<code class="next">#links-pseudo a:hover {color: red;}</code>
+<code class="next">#links-pseudo a:active {смена позиции}</code>			
+		</pre>
+	</section>
+	<section class="slide" id="links-pseudo">
+		<h2>Псевдоклассы состояний гиперссылок</h2>
+		<ul>
+			<style>
+				#links-pseudo a:visited {color: green;}
+				#links-pseudo a:hover {color: red;}
+				#links-pseudo a:active {position: relative; top: -10px; left: 5px;}
+			</style>
+			<li>Не посещенная — <a href="http://test.dz/test">a:link</a></li>
+			<li>Посещенная — по которой уже выполнялся переход — <a href="https://html5book.ru/css-css3/">a:visited</a></li>
+			<li>Не нажатая — над которой находится указатель мыши — <a href="http://google.com/?fdsfsdf">a:hover</a></li>
+			<li>Нажатая — которая удерживается мышью — <a href="http://google.com/?fdfsdf">a:active</a></li>
+			<li><a href="http://shpargalkablog.ru/2012/02/psevdoklassy-css.html">Тут много примеров</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Псевдоклассы состояний полей</h2>
+		<pre>
+<code>#forms-pseudo input:invalid {border: 2px solid red;}</code>
+<code class="next">#forms-pseudo input:valid {border: 2px solid green;}</code>
+<code class="next">#forms-pseudo input:focus {border: 2px solid gold;}</code>
+<code class="next">#forms-pseudo input:hover {смена позиции}</code>	
+		</pre>
+	</section>
+	<section class="slide" id = "forms-pseudo">
+		<h2>Псевдоклассы состояний полей</h2>
+		<style>
+			#forms-pseudo input {
+				margin-top: 5px;
+				height: 40px;
+				width: 300px;
+				padding: 5px;
+			}
+			#forms-pseudo input:invalid {
+				border: 2px solid red;
+			}
+			#forms-pseudo input:valid {
+				border: 2px solid green;
+			}
+			#forms-pseudo input:focus {
+				border: 2px solid gold;
+			}
+			#forms-pseudo input:hover {
+				position: relative;
+				top: 5px;
+				left: -5px;
+			}
+		</style>
+
+		<p><input type="text" placeholder="Просто текст"></p>
+		<p><input type="number" placeholder="Число от 1 до 5" min="1" max="5"></p>
+		<p><input type="email" placeholder="email"></p>
+	</section>
+	<section class="slide">
+		<h2>Короткая запись margin</h2>
+		<ul>
+			<li>margin-top</li>
+			<li>margin-left</li>
+			<li>margin-right</li>
+			<li>margin-bottom</li>
+			<li class="next">margin: [top] [right] [bottom] [left]</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Короткая запись border</h2>
+		<ul>
+			<li>border-width</li>
+			<li>border-style</li>
+			<li>border-color</li>
+			<li class="next">border: [border-width] [border-style] [border-color];
+</li>
+			<li class="next">border: 1px solid #111;</li>
+			<li class="next">border: 2px dotted #222;</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Короткая запись font</h2>
+		<ul>
+			<li>font: [font-style] [font-variant] [font-weight] [font-size]/[line-height] [font-family];</li>
+			<li class="next">font: 14px Georgia, serif;
+</li>
+			<li class="next">font: italic lighter 14px/1.4 Georgia, serif;</li>
+			<li class="next">font: italic small-caps lighter 14px/1.4 Georgia, serif;</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Поток документа</h2>
+		<p>
+Порядок отображения элементов на странице называется потоком документа. Блочные элементы отображаются как прямоугольные области, идущие друг за другом сверху вниз, а строчные элементы располагаются сверху вниз и слева направо и при необходимости переносятся на новую строку.		
+		</p>
+	</section>
+	<section class="slide">
+		<h2>Свойство position</h2>
+		<ul>
+			<li>static - по умолчанию</li>
+			<li class="next">relative - элемент можно сдвигать относительно родителя. Занимаемое им место сохраняется в потоке. Сдвиг происходит при помощи свойств top, right, bottom, left</li>
+			<li class="next">absolute - элемент вынимается из потока и позиционируются от блока контейнера со свойством не static</li>
+			<li class="next">fixed - фиксирует местоположение относительно окна браузера, удаляется из потока</li>
+		</ul>
+	</section>
+	<section class="slide" id="relative1">
+		<h2>position: relative;</h2>
+		<style>
+			#relative1 div {
+				background-color: gold;
+				height: 370px;
+				width: 350px;
+				padding: 10px;
+			}
+			#relative1 div:hover {
+				position: relative;
+				left: 100px;
+				top: 50px;
+			}
+		</style>
+		<div>			
+			<p>div:hover {</p>	
+			<p>	&nbsp;	&nbsp;	&nbsp;	&nbsp;position: relative; </p>	
+			<p>	&nbsp;	&nbsp;	&nbsp;	&nbsp;left: 100px;	</p>
+			<p>	&nbsp;	&nbsp;	&nbsp;	&nbsp;top: 50px;	</p>
+			<p>}	</p>
+	    </div>
+	</section>
+	<section class="slide" id="absolute">
+		
+	</section>
+		<p class="badge">./
 			<a href="https://github.com/shower/shower">Fork me on GitHub</a>
 		</p>
 	<!--
