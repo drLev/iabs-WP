@@ -20,6 +20,15 @@
 			set slide ID to get needed elements
 		-->
 		<style>
+			.corp-cube {
+				background-color: #FEDB37;
+				width: 100px;
+				height: 100px;
+				padding: 10px;
+			}
+			.corp-bgc {
+				background-color: #FEDB37;
+			}
 			#cover {
 				background-color: #FEDB37;
 			}
@@ -192,8 +201,10 @@ echo some_function($a);
 		<h2>Использование</h2>
 		<pre>
 		<code>&lt;php</code>
-		<code><mark class="comment">//Браузер перейдет на другую страницу</mark></code>
-		<code>header("Location: auth.php");</code>
+		<code><mark class="comment">//Команда на установку куки</mark></code>
+		<code>header("Set-Cookie: sectet=sf342dsf2342df; ...;");</code>
+		<code class="next"><mark class="comment">//Браузер перейдет на другую страницу</mark></code>
+		<code class="next">header("Location: auth.php");</code>
 		</pre>
 	</section>
 	<section class="slide">
@@ -251,10 +262,10 @@ echo some_function($a);
 		<h2>Применение функций высшего порядка</h2>
 		<pre>
 		<code>$filter1 = function($val){ return $val == 1;};</code>
-		<code class="next">$filter2 = function($val){ return $val == 2;};</code>
-		<code class="next">$filter3 = function($val){return $val != "."};</code>
 		<code class="next">var_dump(filter_array($arr, $filter1));</code>
+		<code class="next">$filter2 = function($val){ return $val == 2;};</code>
 		<code class="next">var_dump(filter_array($arr, $filter2));</code>
+		<code class="next">$filter3 = function($val){return $val != "."};</code>
 		<code class="next">var_dump(filter_array($arr, $filter3));</code>
 		</pre>
 	</section>	
@@ -422,9 +433,9 @@ echo some_function($a);
 	<section class="slide">
 		<h2>Псевдоклассы состояний гиперссылок</h2>
 		<pre>
-<code>#links-pseudo a:visited {color: green;}</code>
-<code class="next">#links-pseudo a:hover {color: red;}</code>
-<code class="next">#links-pseudo a:active {смена позиции}</code>			
+<code>a:visited {color: green;}</code>
+<code class="next">a:hover {color: red;}</code>
+<code class="next">a:active {смена позиции}</code>			
 		</pre>
 	</section>
 	<section class="slide" id="links-pseudo">
@@ -445,10 +456,10 @@ echo some_function($a);
 	<section class="slide">
 		<h2>Псевдоклассы состояний полей</h2>
 		<pre>
-<code>#forms-pseudo input:invalid {border: 2px solid red;}</code>
-<code class="next">#forms-pseudo input:valid {border: 2px solid green;}</code>
-<code class="next">#forms-pseudo input:focus {border: 2px solid gold;}</code>
-<code class="next">#forms-pseudo input:hover {смена позиции}</code>	
+<code>input:invalid {border: 2px solid red;}</code>
+<code class="next">input:valid {border: 2px solid green;}</code>
+<code class="next">input:focus {border: 2px solid gold;}</code>
+<code class="next">input:hover {смена позиции}</code>	
 		</pre>
 	</section>
 	<section class="slide" id = "forms-pseudo">
@@ -514,9 +525,9 @@ echo some_function($a);
 	</section>
 	<section class="slide">
 		<h2>Поток документа</h2>
-		<p>
+		<blockquote>
 Порядок отображения элементов на странице называется потоком документа. Блочные элементы отображаются как прямоугольные области, идущие друг за другом сверху вниз, а строчные элементы располагаются сверху вниз и слева направо и при необходимости переносятся на новую строку.		
-		</p>
+		</blockquote>
 	</section>
 	<section class="slide">
 		<h2>Свойство position</h2>
@@ -551,7 +562,127 @@ echo some_function($a);
 	    </div>
 	</section>
 	<section class="slide" id="absolute">
-		
+	<h2>position: absolute;</h2>
+
+		<button onclick="
+document.getElementById('relative-container').style.position ='relative';
+document.getElementById('absolute-child').style.position ='absolute';
+		">absolute</button>
+		<button onclick="
+document.getElementById('relative-container').style.position ='static';
+document.getElementById('absolute-child').style.position ='static';
+		">static</button>		
+		<div id="relative-container" class="corp-bgc" style="width: 600px; height: 300px; border: 3px dashed black;">
+			<div id="absolute-child" style="background-color: grey; width: 200px; height: 150px; top: 20px; left: 20px; padding: 10px;">
+			<p>top: 20px;</p> 
+			<p>left: 20px;</p>	
+			</div>	
+		</div>
+			
+	</section>
+	<section class="slide">
+		<h2>float</h2>
+		<blockquote>Определяет, по какой стороне будет выравниваться элемент, при этом остальные элементы будут обтекать его с других сторон. Когда значение свойства float равно none, элемент выводится на странице как обычно, при этом допускается, что одна строка обтекающего текста может быть на той же линии, что и сам элемент.</blockquote>
+	</section>
+	<section class="slide">
+		<h2>Пример</h2>
+		<div style="padding: 30px; background-color: gold; margin-right: 10px;">
+			<ul>
+				<li>padding: 30px; </li>
+				<li>background-color: gold; </li>
+				<li>margin-right: 10px;</li>
+			</ul>
+		</div>
+		<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cumque quaerat aliquid consequatur vitae modi ex illum, aspernatur laudantium, beatae.</div>
+	</section>	
+	<section class="slide">
+		<h2>Пример</h2>
+		<div style="padding: 30px; float: left; background-color: gold; margin-right: 10px;">
+			<ul>
+				<li>padding: 30px; </li>
+				<li>float: left;</li>
+				<li>background-color: gold; </li>
+				<li>margin-right: 10px;</li>
+			</ul>
+		</div>
+		<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cumque quaerat aliquid consequatur vitae modi ex illum, aspernatur laudantium, beatae.</div>
+	</section>
+	<section class="slide">
+		<div><div style="float: left;" class="corp-cube">left</div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti commodi voluptates perspiciatis dolorum sapiente sint pariatur nulla a culpa mollitia placeat incidunt molestias veritatis quod, fuga nesciunt error et optio tempora doloremque?<div style="float: right;" class="corp-cube">right</div> Fuga tempore, natus. Expedita, autem! Nobis accusantium minus reiciendis ad quas, culpa aliquam delectus nemo exercitationem ut sint.</div>
+	</section>
+	<section class="slide">
+		<h2>clear - отменяет обтекание</h2>
+		<p>
+			Чтобы восстановить работу потока и отменить обтекание используется свойство clear: both; у следующего за плавающим элемента. 
+		</p>
+	</section>
+	<section class="slide" id="header-ex">
+		<h2>Пример шапки</h2>
+		<style>
+		#header-ex .header {
+			background-color: #000099;
+			width: 800px;
+			height: 200px;
+			position: relative;
+		}
+		#header-ex .logo {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+		}
+		#header-ex .form {
+			float: right;
+			padding: 40px;
+		}
+		</style>
+		<div class="header">
+			<div class="form">
+				<input type="text" placeholder="Поиск">
+			</div>		
+			<div class="logo corp-cube">logo</div>
+		</div>
+		<div>
+			<h3>Текст</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit autem, quod inventore rem velit magni!</p>
+		</div>
+	</section>
+	<section class="slide black" id="practice">
+		<style>
+		#practice h2 {
+			color: rgba(255, 255, 255, .7);
+		}
+		</style>
+		<h2 class="shout">Пишем код</h2>
+		<img src="pictures/code.jpg" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<h2>Домашнее задание PHP</h2>
+		<ul>
+			<li>https://habrahabr.ru/post/87119/ обе части</li>
+			<li>http://www.codeharmony.ru/materials/49</li>
+			<li>http://php720.com/lesson/50</li>
+			<li>http://php720.com/lesson/51</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Написать php программу.</h2>
+		<p> Есть класс Dog, у него есть поле alias(кличка) и метод bark(лай). Метод bark выводит на страницу текст “Гав-Гав”. Создать 3 объекта класса собака. Первому объекту изменить поле кличка на “Бобик”, остальным на “Шарик” и “Бакс”. У каждого объекта вызвать метод bark.</p>
+	</section>
+	<section class="slide">
+		<h2>Написать php программу.</h2>
+		<p> Есть класс Cat, у него есть поле alias(кличка) и метод meow(мяуканье). Метод meow выводит на страницу текст “Мяу Мяу”. Конструктор класса, как аргумент принимает кличку. Есть массив кличек “Мурка”, “Барсик”, “Снежок”. Для каждой клички, создать объект класса Cat</p>
+	</section>	
+	<section class="slide">
+		<h2>Написать php программу.</h2>
+		<p>Есть класс Parrot(попугай). У него есть свойство alias(кличка) и метод talk(говорить), метод talk выводит на экран “{кличка попугая}, дурак!”. Создайте объект класса Parrot, присвойте кличку - “Попка”. Вызовите метод talk(). Этому же объекту присвойте кличку “Ромка”, вызовите метод talk.</p>
+	</section>	
+	<section class="slide">
+		<h2>Верстка</h2>
+		<ul>
+			<li>http://shpargalkablog.ru/2012/02/psevdoklassy-css.html</li>
+			<li>http://www.aloha.kiev.ua/Optimizaciya-CSS-5-samyh.html</li>
+			<li>https://html5book.ru/css-position/</li>
+		</ul>
 	</section>
 		<p class="badge">./
 			<a href="https://github.com/shower/shower">Fork me on GitHub</a>
