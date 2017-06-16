@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/screen-16x10.css">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/my.css">
+<body class="shower list">
+	<header class="caption">
+		<h1>Shower Presentation Engine</h1>
+		<p>Yours Truly, Famous Inc.</p>
+	</header>
+	<section class="slide" id="cover">
+		<h2>День 11</h2>
+		<img src="pictures/iabs2.jpg" alt="" class="cover">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+		-->
+		<style>
+			.corp-cube {
+				background-color: #FEDB37;
+				width: 300px;
+				height: 300px;
+				padding: 10px;
+				margin: 0 auto;
+			}
+			.corp-bgc {
+				background-color: #FEDB37;
+			}
+			#cover {
+				background-color: #FEDB37;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+		</style>
+	</section>
+	<section class="slide black" id="homework">
+		<style>
+			#homework h2 {
+				color: rgba(0, 255, 255, 0.9);
+			}
+		</style>
+		<h2 class="shout">Домашнее задание</h2>
+		<img src="pictures/day11/home.jpg" alt="" class="cover">		
+	</section>
+	<section class="slide">
+		<h2>Использование статического вызова ::</h2>
+		<pre>
+			<code>class A {</code>
+			<code>	public function a(){</code>
+			<code>		echo "test";</code>
+			<code>	}</code>
+			<code>}</code>
+			<code>A::a(); <mark class="comment">//можно вызвать так, но нельзя</mark></code>
+			<code class="next">$a = new A(); <mark class="comment">//нужно так</mark></code>
+			<code class="next"><mark class="important">$a->a();</mark></code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Статический вызов для статических методов</h2>
+		<pre>
+			<code>class A {</code>
+			<code>	<mark class="important">static</mark> public function a(){</code>
+			<code>		echo "test";</code>
+			<code>	}</code>
+			<code>}</code>
+			<code><mark class="important">A::a();</mark> <mark class="comment">//теперь можно</mark></code>
+		</pre>
+	</section>	
+	<section class="slide black" id="cover-php">
+		<style>
+		#cover-php h2 {
+			color: rgba(255, 255, 255, .7);
+		}
+		</style>
+		<h2 class="shout">PHP</h2>
+		<img src="pictures/code.jpg" alt="" class="cover">
+	</section>
+	<section class="slide">
+		<h2>Тест</h2>
+		<pre>
+			<code>$g = "World";</code>
+			<code>$c = function($a){</code>
+			<code>	echo $c . $g;</code>
+			<code>}</code>
+			<code>$c();</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Замыкания</h2>
+		<pre>
+			<code>$g = 'World';</code>
+			<code>$c = function($a) use($g){</code>
+			<code>    echo $a . " " .  $g;</code>
+			<code>};</code>
+			<code class="next">$c("Hello ");</code>
+		</pre>
+	</section>	
+	<section class="slide">
+		<h2>Применение</h2>
+		<pre>
+			<code>function getRangeValidator($min, $max){</code>
+			<code>	return function($v) use ($min, $max){</code>
+			<code>		return ($v >= $min && $v <= $max) </code>
+			<code>       	? true </code>
+			<code>       : “Значение не попадает в промежуток”;</code>
+			<code>	};</code>
+			<code>}	</code>		
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Классы как типы данных</h2>
+		<p>Типы данных определяют, что можно делать с переменными этого типа. Классы по сути грают ту же роль. Класс объекта решает, что вы можете с ним сделать и какие методы и свойства класса использовать.</p>
+	</section>
+	<section class="slide">
+		<h2>Работа с классами</h2>
+		<pre>
+			<code>class ParentClass{}</code>			 
+			<code>class MyClass extends ParentClass{}</code>			 
+			<code>$a = new MyClass;</code>			 
+			<code>var_dump($a instanceof MyClass); // вернет true</code>
+			<code>var_dump($a instanceof ParentClass); // вернет true</code>			
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Проверка типов</h2>
+		<pre>
+			<code>function test(array $a) {</code>
+			<code>	var_dump($a);</code>
+			<code>}</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Так же работает и для классов</h2>
+		<pre>
+			<code>function test(MyClass $a) {</code>
+			<code>	var_dump($a);</code>
+			<code>}</code>			
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Зачем?</h2>
+		<ul>
+			<li>Выявить ошибку раньше</li>
+			<li class="next">Писать более понятный код</li>
+			<li class="next">Помочь вашей IDE</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Практическая работа</h2>
+		<p>Написать сайт, материалы которого лежат в директории articles. Каждая статья это отдельный файл. В файле заголовок и тело статьи разделены разделителем. На главной странице сайта выводится список статей с ссылками на них.</p>
+	</section>
+	<section class="slide black">
+		<h2 class="shout">HTML&CSS</h2>
+		<img src="pictures/web_interfaces.jpg" class="cover">
+	</section>	
+	<section class="slide" id="border-radius1">
+		<h2>border-radius</h2>
+		<div class="corp-cube" style="border-radius: 20px;">border-radius: 20px</div>
+	</section>;
+	<section class="slide" id="border-radius2">
+		<h2>border-radius</h2>
+		<div class="corp-cube" style="border-radius: 20px 0 0 0;">border-radius: 20px 0 0 0;</div>
+	</section>
+	<section class="slide" id="border-radius3">
+		<h2>border-radius</h2>
+		<div class="corp-cube" style="border-radius: 50%; line-height: 300px; text-align: center;">border-radius: 50%;</div>
+	</section>
+	<section class="slide" id="border-radius4">
+		<h2>border-radius</h2>
+		<div class="corp-cube" style="border-radius: 50% 0 0 0; line-height: 300px; text-align: center;">border-radius: 50%;</div>
+	</section>
+	<section class="slide" id="border-radius4">
+		<style>
+			#border-radius4 .corp-cube:hover {
+				border-radius: 50% 0 0 0;
+			}
+		</style>
+		<h2>border-radius для hover</h2>
+		<div class="corp-cube" style=" line-height: 300px; text-align: center;">border-radius: 50%;</div>
+	</section>	
+	<section class="slide" id="opacity">
+		<style>
+			#opacity .corp-cube:hover {
+				opacity: .3;			}
+		</style>
+		<h2>Прозрачность - opacity</h2>
+		<div class="corp-cube">
+		<p>.corp-cube:hover {</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;opacity: .3; /*30%*/</p>
+		<p>}</p>
+		</div>
+	</section>	
+	<section class="slide">
+		<h2>Тень box-shadow</h2>
+		<p>box-shadow: [inset] 2px 5px 10px black;</p>
+		<p>inset - eсли тень направлена внутрь</p>
+		<p>2px - сдвиг по x</p>
+		<p>5px - сдвиг по y</p>
+		<p>5px - размытие тени</p>
+		<p>black - цвет тени</p>
+	</section>	
+	<section class="slide" id="box-shadow">
+	<style>
+		#box-shadow .corp-cube {
+			box-shadow: 12px 12px 20px rgba(0, 0, 0, .8);
+		}
+		#box-shadow .corp-cube:hover {
+			box-shadow: 18px 18px 25px rgba(0, 0, 0, .5);
+		}
+	</style>
+		<h2>Пример</h2>
+		<div class="corp-cube">
+			box-shadow: 12px 12px 20px rgba(0, 0, 0, .8);	
+		</div>
+	</section>	
+	<section class="slide">
+		<h2>Анимированный переход transition</h2>
+		<pre>
+			<code>transition: <переход> [, <переход> ]*</code>
+			<code>переход = [ none | transition-property ] || transition-duration || 
+transition-timing-function || transition-delay</code>
+		</pre>
+	</section>	
+	<section class="slide" id="transition">
+		<style>
+			#transition .corp-cube:hover {
+				font-size: 28px;
+				opacity: .3;
+			}
+		</style>
+		<h2>Демонстрация</h2>
+		<div class="corp-cube" style="transition: 2s;">
+			Для блока: transition: 2s; 
+			Для hover: font-size: 28px; opacity: .3;
+		</div>
+	</section>	
+	<section class="slide" id="transition">
+		<style>
+			#transition .corp-cube:hover {
+				font-size: 28px;
+				opacity: .3;
+			}
+		</style>
+		<h2>Демонстрация</h2>
+		<div class="corp-cube" style="transition: font-size .3s, opacity 3s;">
+			Для блока: transition: font-size .3s, opacity 3s; <br>
+			Для hover: font-size: 28px; opacity: .3;
+		</div>
+	</section>	
+	<section class="slide">
+		<h2>Практика</h2>
+		<ul>
+			<li>Кнопка с тенью и анимированным переходом</li>
+			<li>Верстка сайта</li>
+		</ul>
+	</section>	
+	<section class="slide">
+		<h2>Домашнее задание</h2>
+		<a href="https://docs.google.com/document/d/1BuF9H1wq8rq1eQFvNqrCrA7d_u7dqHWYlP9lfN19waI/edit">ДЗ</a>
+	</section>
+		<p class="badge">./
+			<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+		</p>
+	<!--
+		To hide progress bar from entire presentation
+		just remJove “progress” element.
+	-->
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
