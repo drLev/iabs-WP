@@ -90,7 +90,7 @@
 			<code>$c = function($a){</code>
 			<code>	echo $c . $g;</code>
 			<code>}</code>
-			<code>$c();</code>
+			<code>$c("Hello");</code>
 		</pre>
 	</section>
 	<section class="slide">
@@ -156,115 +156,6 @@
 	<section class="slide">
 		<h2>Практическая работа</h2>
 		<p>Написать сайт, материалы которого лежат в директории articles. Каждая статья это отдельный файл. В файле заголовок и тело статьи разделены разделителем. На главной странице сайта выводится список статей с ссылками на них.</p>
-	</section>
-	<section class="slide black">
-		<h2 class="shout">HTML&CSS</h2>
-		<img src="pictures/web_interfaces.jpg" class="cover">
-	</section>	
-	<section class="slide" id="border-radius1">
-		<h2>border-radius</h2>
-		<div class="corp-cube" style="border-radius: 20px;">border-radius: 20px</div>
-	</section>;
-	<section class="slide" id="border-radius2">
-		<h2>border-radius</h2>
-		<div class="corp-cube" style="border-radius: 20px 0 0 0;">border-radius: 20px 0 0 0;</div>
-	</section>
-	<section class="slide" id="border-radius3">
-		<h2>border-radius</h2>
-		<div class="corp-cube" style="border-radius: 50%; line-height: 300px; text-align: center;">border-radius: 50%;</div>
-	</section>
-	<section class="slide" id="border-radius4">
-		<h2>border-radius</h2>
-		<div class="corp-cube" style="border-radius: 50% 0 0 0; line-height: 300px; text-align: center;">border-radius: 50%;</div>
-	</section>
-	<section class="slide" id="border-radius4">
-		<style>
-			#border-radius4 .corp-cube:hover {
-				border-radius: 50% 0 0 0;
-			}
-		</style>
-		<h2>border-radius для hover</h2>
-		<div class="corp-cube" style=" line-height: 300px; text-align: center;">border-radius: 50%;</div>
-	</section>	
-	<section class="slide" id="opacity">
-		<style>
-			#opacity .corp-cube:hover {
-				opacity: .3;			}
-		</style>
-		<h2>Прозрачность - opacity</h2>
-		<div class="corp-cube">
-		<p>.corp-cube:hover {</p>
-		<p>&nbsp;&nbsp;&nbsp;&nbsp;opacity: .3; /*30%*/</p>
-		<p>}</p>
-		</div>
-	</section>	
-	<section class="slide">
-		<h2>Тень box-shadow</h2>
-		<p>box-shadow: [inset] 2px 5px 10px black;</p>
-		<p>inset - eсли тень направлена внутрь</p>
-		<p>2px - сдвиг по x</p>
-		<p>5px - сдвиг по y</p>
-		<p>5px - размытие тени</p>
-		<p>black - цвет тени</p>
-	</section>	
-	<section class="slide" id="box-shadow">
-	<style>
-		#box-shadow .corp-cube {
-			box-shadow: 12px 12px 20px rgba(0, 0, 0, .8);
-		}
-		#box-shadow .corp-cube:hover {
-			box-shadow: 18px 18px 25px rgba(0, 0, 0, .5);
-		}
-	</style>
-		<h2>Пример</h2>
-		<div class="corp-cube">
-			box-shadow: 12px 12px 20px rgba(0, 0, 0, .8);	
-		</div>
-	</section>	
-	<section class="slide">
-		<h2>Анимированный переход transition</h2>
-		<pre>
-			<code>transition: <переход> [, <переход> ]*</code>
-			<code>переход = [ none | transition-property ] || transition-duration || 
-transition-timing-function || transition-delay</code>
-		</pre>
-	</section>	
-	<section class="slide" id="transition">
-		<style>
-			#transition .corp-cube:hover {
-				font-size: 28px;
-				opacity: .3;
-			}
-		</style>
-		<h2>Демонстрация</h2>
-		<div class="corp-cube" style="transition: 2s;">
-			Для блока: transition: 2s; 
-			Для hover: font-size: 28px; opacity: .3;
-		</div>
-	</section>	
-	<section class="slide" id="transition">
-		<style>
-			#transition .corp-cube:hover {
-				font-size: 28px;
-				opacity: .3;
-			}
-		</style>
-		<h2>Демонстрация</h2>
-		<div class="corp-cube" style="transition: font-size .3s, opacity 3s;">
-			Для блока: transition: font-size .3s, opacity 3s; <br>
-			Для hover: font-size: 28px; opacity: .3;
-		</div>
-	</section>	
-	<section class="slide">
-		<h2>Практика</h2>
-		<ul>
-			<li>Кнопка с тенью и анимированным переходом</li>
-			<li>Верстка сайта</li>
-		</ul>
-	</section>	
-	<section class="slide">
-		<h2>Домашнее задание</h2>
-		<a href="https://docs.google.com/document/d/1BuF9H1wq8rq1eQFvNqrCrA7d_u7dqHWYlP9lfN19waI/edit">ДЗ</a>
 	</section>
 		<p class="badge">./
 			<a href="https://github.com/shower/shower">Fork me on GitHub</a>
