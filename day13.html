@@ -424,8 +424,8 @@
 	</table>	
 </section>
 <section class="slide">
-	<h2>Город</h2>
 	<table>
+		<thead>Города</thead>
 		<tr>
 			<td>Город</td>
 			<td>Код Города</td>
@@ -441,8 +441,8 @@
 	</table>
 </section>
 <section class="slide">
-	<h2>Пользователи</h2>
 	<table>
+		<thead>Пользователи</thead>
 		<tr>
 			<td>Пользователь</td>
 			<td>Город</td>
@@ -459,6 +459,75 @@
 			<td>Иванов И.И.</td>
 		</tr>				
 	</table>
+</section>
+<section class="slide">
+	<h2>Первичный ключ</h2>
+	<p>Применяется для уникальной идентификации записи в таблице. В таблице не может быть две одинаковых записи с таким значеним.</p>
+	<p class="next">Может быть составным</p>
+	<table>
+		<thead>Пользователи</thead>
+		<tr>
+			<td>Пользователь <mark class="important">PK</mark></td>
+			<td>Город <mark class="next important">PK</mark></td>
+			<td>ФИО</td>
+		</tr>
+		<tr>
+			<td>admin</td>
+			<td>Никополь</td>
+			<td>Романичев В.В.</td>
+		</tr>
+		<tr>
+			<td>user1</td>
+			<td>Киев</td>
+			<td>Иванов И.И.</td>
+		</tr>				
+	</table>	
+</section>
+<section class="slide">
+	<h2>Вторичный ключ</h2>
+	<table>
+		<tr>
+			<td>Пользователь<mark class="important">PK</mark></td>
+			<td>Город <mark class="important">FK</mark></td>
+			<td>ФИО</td>
+		</tr>
+		<tr>
+			<td>admin</td>
+			<td>Никополь</td>
+			<td>Романичев В.В.</td>
+		</tr>
+		<tr>
+			<td>user1</td>
+			<td>Киев</td>
+			<td>Иванов И.И.</td>
+		</tr>				
+	</table>	
+</section>
+<section class="slide">
+	<h2>Вторичный ключ</h2>
+	<table>
+		<tr>
+			<td>Город<mark class="important">PK</mark></td>
+			<td>Код Города</td>
+		</tr>
+		<tr>
+			<td>Никополь</td>
+			<td>05662</td>
+		</tr>	
+		<tr>
+			<td>Киев</td>
+			<td>035</td>
+		</tr>				
+	</table>	
+</section>
+<section class="slide">
+	<h2>Суррогатные первичные ключи и AUTO_INCREMENT</h2>
+	<p>Сурогатные ключи - уникальное поле, единственным призванием которого является уникальность в рамках этой таблицы.</p>
+	<p>Автоинкремент - увеличение числа на единицу для каждого нового значения.</p>
+</section>
+<section class="slide">
+	<h2>Проектирование</h2>
+	<a href="http://www.web2py.com/sqldesigner">Онлайн дизайнер</a>
 </section>
 <section class="slide">
 	<h2>Практическая работа SQL</h2>
