@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/screen-16x10.css">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/my.css">
+<body class="shower list">
+	<header class="caption">
+		<h1>Shower Presentation Engine</h1>
+		<p>Yours Truly, Famous Inc.</p>
+	</header>
+	<section class="slide" id="cover">
+		<h2>День 23</h2>
+		<img src="pictures/iabs2.jpg" alt="" class="cover">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+		-->
+		<style>
+			.corp-cube {
+				background-color: #FEDB37;
+				width: 300px;
+				height: 300px;
+				padding: 10px;
+				margin: 0 auto;
+			}
+			.corp-bgc {
+				background-color: #FEDB37;
+			}
+			#cover {
+				background-color: #FEDB37;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+		</style>
+	</section>
+<section class="slide black" id="cover">
+	<style>
+	#cover h2 {
+		color: rgba(255, 255, 255, .7);
+	}
+	</style>
+	<h2 class="shout">Системы контроля версий</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
+</section>
+<section class="slide">
+	<h2>Системы контроля версий</h2>
+	<p><b>Система контроля версий</b> — это система, записывающая изменения в файл или набор файлов в течение времени и позволяющая вернуться позже к определённой версии. Системы контроля версий можно использовать практически для любых типов файлов.</p>
+</section>
+<section class="slide">
+	<h2>Как было?</h2>
+	<p>Создавались папки: </p>
+	<ul>
+		<li>Проект 12.02.2017</li>
+		<li>Проект 15.02.2017</li>
+		<li>Проект 17.02.2017</li>
+		<li>Проект 25.02.2017</li>
+		<li>Проект 27.02.2017</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Проблемы</h2>
+	<ul>
+		<li>Нет простого способа понять что изменилось</li>
+		<li>Невозможно вести коллективную разработку</li>
+		<li>Проблемы с синхронизацией кода на сервере</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Современные системы контроля версий</h2>
+	<div style="text-align: center; height: 80%;"><img style="height: 100%;" src="pictures/day23/distributed.png" alt=""></div>
+</section>
+<section class="slide">
+	<h2>git commit</h2>
+	<p>Практическое задание</p>
+	<ol>
+		<li>Создать репозиторий на github</li>
+		<li>Сделать свой коммит как рекомендует гитхаб</li>
+		<li>Отредактировать файл README</li>
+		<li>Сделать коммит изменений (git commit -am 'first')</li>
+		<li>Залить изменения в репозиторий(git push)</li>
+	</ol>
+</section>
+<section class="slide">
+	<h2>Работа с ветками</h2>
+	<p>Ветки - позволяют хранить в одном хранилище(репозитории) несколько историй измений. И объединять истории этих веток.</p>
+</section>
+<section class="slide">
+	<h2>Ветвление</h2>
+	<style>
+		#rotating {
+			transition: .3s;
+			text-align: center;
+			height: 80%;
+		}
+		#rotating:hover {
+			transform: rotate(-90deg);
+			height: 95%;
+		}
+	</style>
+	<div id="rotating"><img style="height: 100%;" src="pictures/day23/branching.png" alt=""></div>
+</section>
+<section class="slide">
+	<h2>git checkot</h2>
+	<ol>
+		<li>Создать ветку develop (git branch -b develop)</li>
+		<li>Отредактривать файл README в ветке develop</li>
+		<li>Сделать коммит</li>
+		<li>Отредактировать файл README в ветке master</li>
+		<li>Сделать коммит</li>
+		<li>Отравить изменения в репозиторий</li>
+	</ol>	
+</section>
+<section class="slide black" id="cover">
+	<style>
+	#cover h2 {
+		color: rgba(255, 255, 255, .7);
+	}
+	</style>
+	<h2 class="shout">Javascript</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
+</section>
+<section class="slide">
+	<h2>Браузерные события</h2>
+	<p>Событие – это сигнал от браузера о том, что что-то произошло. Существует много видов событий. </p>
+	<p>Посмотрим список самых часто используемых, пока просто для ознакомления:</p>
+</section>
+<section class="slide">
+	<h2>События мыши:</h2>
+	<ul>
+		<li>click – происходит, когда кликнули на элемент левой кнопкой мыши</li>
+		<li>contextmenu – происходит, когда кликнули на элемент правой кнопкой мыши</li>
+		<li>mouseover – возникает, когда на элемент наводится мышь</li>
+		<li>mousedown и mouseup – когда кнопку мыши нажали или отжали</li>
+		<li>mousemove – при движении мыши</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>События на элементах управления:</h2>
+	<ul>
+		<li>submit – посетитель отправил форму form</li>
+		<li>focus – посетитель фокусируется на элементе, например нажимает на input</li>
+	</ul>	
+</section>
+<section class="slide">
+	<h2>События на элементах управления:</h2>
+	<ul>
+		<li>submit – посетитель отправил форму form</li>
+		<li>focus – посетитель фокусируется на элементе, например нажимает на input</li>
+	</ul>	
+	<h2>Клавиатурные события:</h2>
+	<ul>
+		<li>keydown – когда посетитель нажимает клавишу</li>
+		<li>keyup – когда посетитель отпускает клавишу</li>	
+	</ul>
+</section>
+<section class="slide">
+	<h2>События документа:</h2>
+	<ul>
+		<li>DOMContentLoaded – когда HTML загружен и обработан, DOM документа полностью построен и доступен.</li>
+	</ul>
+	<h2>События CSS:</h2>
+	<ul>
+		<li>transitionend – когда CSS-анимация завершена.</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Способы подписки на события</h2>
+	<pre>
+		<code>//HTML</code>
+		<code>&lt;input type=&quot;button&quot; onclick=&quot;alert('Клик!')&quot; value=&quot;Кнопка&quot;/&gt;</code>
+		<code>//HTML + JS</code>
+		<code>&lt;input type=&quot;button&quot; id=&quot;button&quot; value=&quot;Кнопка&quot; /&gt;</code>
+		<code>&lt;script&gt;</code>
+		<code>  button.onclick = function() {</code>
+		<code>    alert( 'Клик!' );</code>
+		<code>  };</code>
+		<code>&lt;/script&gt;</code>		
+	</pre>
+</section>
+<section class="slide">
+	<h2>Недостаток</h2>
+	<p>Главный недостаток этого способа - то что невозможно подписаться дважды на одно событие.</p>
+	<pre>
+		<code>function sayThanks() {</code>
+		<code>  alert( 'Спасибо!' );</code>
+		<code>}</code>
+		<code>elem.onclick = sayThanks;	</code>	
+	</pre>
+</section>
+<section class="slide">
+	<h2>Как подписаться на одно событие дважды?</h2>
+	<pre>
+		<code>function handler() {</code>
+		<code>  alert( 'Спасибо!' );</code>
+		<code>}</code>
+		<code>input.addEventListener("click", handler);</code>
+		<code>input.addEventListener("click", handler2);</code>
+		<code style="next">// Как удалить подписку?.</code>
+		<code style="next">input.removeEventListener("click", handler);	</code>	
+	</pre>
+</section>
+<section class="slide">
+	<h2>Убегающий круг</h2>
+	<ul>
+		<li>Подготовить верстку. Для работы нужен красный круг на странице</li>
+		<li>При клике на круг круг должен отскакивать вправо на 60px</li>
+		<li>При наведении на круг, круг должен смещаться на 5px вниз</li>
+		<li>При нажатии на любую клавишу, круг должен отскакивать влево на 60px</li>
+		<li class="next"><a href="https://codepen.io/vromnichev24/pen/zEzgMx">Решение</a></li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>TODO list</h2>
+	<ul>
+		<li>Подготовить верстку, текстовое поле, кнопка "Добавить" и контейнер для записей</li>
+		<li>При нажатии на кнопку брать значение с текстового поля и добавлять его в контейнер</li>
+		<li>Сделать возможность добавлять пункты в список при нажатии клавиши Enter</li>
+		<li>Соблюсти принцип DRY</li>https://codepen.io/vromnichev24/pen/QqgeXY
+		<li class="next"><a href="https://codepen.io/vromnichev24/pen/zEzgMx">Решение</a> </li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Асинхронное программирование</h2>
+	<p><b>Асинхронное программирование</b> – стиль программирования, при котором результат работы функций доступен не сразу, а через некоторое время. Асинхронная функция – это функция, после вызова которой JavaScript приложение продолжает работать, потому что функция сразу выполняет возврат. Результат работы асинхронной функции становится известным позже, и для того, чтобы оповестить наше приложении о полученных значениях, асинхронная функция вызывает другую функцию (callback), которую мы передаем в аргументах при запуске.</p>	
+</section>
+<section class="slide">
+	<img src="pictures/day23/eventloop.jpg" alt="">
+</section>
+<section class="slide">
+	<h2>Нужно проследить конда функция завершит своё выполнение?</h2>
+	<pre>
+		<code>var callbackFunc = function(){</code>
+		<code>	alert("Функция first выполнена");</code>
+		<code>}</code>
+		<code style="next">var firstFunc = function (callback) {</code>
+		<code style="next">	var i = 2 + 2;</code>
+		<code style="next">	callback();</code>
+		<code style="next">}</code>
+		<code style="next">fisrtFunc(callbackFunc);	</code>	
+	</pre>
+</section>
+<section class="slide">
+	<h2>Callbacks Hell</h2>
+	<pre>
+		<code>step1(</code>
+		<code>	function(result1) {</code>
+		<code>       step2(function(result2) {</code>
+		<code>             step3(function(result3) {</code>
+		<code>                    // и т.д.</code>
+		<code>             });</code>
+		<code>       });</code>
+		<code>	}</code>
+		<code>);</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>setTimeout - откладывает выполнение</h2>
+	<p>var timerId = setTimeout(func, delay[, arg1, arg2...])</p>
+	<ul>
+		<li class="next">func - функция для выполнения с задержкой</li>
+		<li class="next">delay - Задержка в миллисекундах, 1000 миллисекунд равны 1 секунде</li>
+		<li class="next">arg1, arg2 - Аргументы, которые нужно передать функции. </li>
+	</ul>	
+	<p class="next">clearTimeour(timerId) - остановит выполнение</p>		
+</section>
+<section class="slide">
+	<h2>Практическая работа</h2>
+	<ul>
+		<li>Вывести сообщение привет с таймаутом 5секунд</li>
+		<li>Написать функцию hello(name), которая приветствует имя, поприветствуйте себя с задержкой	</li>	
+		<li>Поставить вывод сообщения Привет с задержкой в 5 секунд. И запустить с задержкой в 3 секунды отмену вывода сообщения Привет</li>
+		<li>Зная про Event Loop что вы можете сказать о времени задержки?</li>
+		<li class="next"><a href="https://codepen.io/vromnichev24/pen/pWroKd">Решение</a></li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>setInterval - выполняет функцию много раз</h2>
+	<p>var intervalId = setInterval(func, delay[, arg1, arg2...])</p>
+	<ul>
+		<li class="next">func - функция для выполнения с заданным интервалом</li>
+		<li class="next">delay - Задержка в миллисекундах, 1000 миллисекунд равны 1 секунде</li>
+		<li class="next">arg1, arg2 - Аргументы, которые нужно передать функции</li>
+	</ul>	
+	<p class="next">clearInterval(intervalId) - остановит выполнение</p>		
+</section>
+<section class="slide">
+	<h2>Практическая работа</h2>
+	<ul>
+		<li>Выводить Привет каждые 5 секунд</li>
+		<li>Написать секундомер для сайта</li>
+		<li>Написать обратный отсчет секунд начиная со 100, когда закончится время вывести Привет</li>
+		<li>Написать секундомер для сайта и остановить его через 40 секунд</li>
+		<li><a href="https://codepen.io/vromnichev24/pen/borGmq">Решения</a></li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Домашнее задание</h2>
+	<ul>
+		<li><a href="https://docs.google.com/document/d/1Xf2wLGPD5_jmASQm2j4gXI7865xe77oM0kdbL9pUKjE/edit">Ссылка</a></li>
+	</ul>
+</section>
+<p class="badge">
+	<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+</p>
+	<!--
+		To hide progress bar from entire presentation
+		just remJove “progress” element.
+	-->
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
