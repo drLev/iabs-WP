@@ -230,6 +230,11 @@
 	<img src="pictures/code.jpg" alt="" class="cover">
 </section>
 <section class="slide">
+	<h2>Самостоятельная работа(20 минут)</h2>
+	<p><a href="exercise/Day13.txt">Задание</a></p>
+	<p>Можно задавать вопросы</p>
+</section>
+<section class="slide">
 	<h2>Пространства имен</h2>
 	<p>Проблема: использовать в одной программе классы с одинаковыми именами.</p>
 	<p class="next">Пример: Вы не можете разместить в одной папке файл text.txt</p>
@@ -270,6 +275,15 @@
 	<h2>Давайте смотреть код</h2>
 	<a href="https://github.com/otis22/iabs-webprogrammers/tree/master/students/scripts/namespace_demo/New">Пространства имен</a>
 </section>
+<section class="slide">
+	<h2>Практическая работа</h2>
+	<p><a href="/exercise/day13-namespace.tar.gz">задание</a></p>
+	<ul>
+		<li>Создать экземпляры используя полный путь к классу</li>
+		<li>Создать экземпляры обоих классов используя ключевое слово use</li>
+	</ul>
+</section>
+
 <section class="slide black" id="cover-php">
 	<style>
 	#cover-php h2 {
@@ -292,10 +306,6 @@
 	<p>SQL - язык структурированных запросов, основной задачей которого является предоставление простого способа считывания и записи информации в базу данных.</p>
 </section>
 <section class="slide">
-	<h2>Реляционные БД</h2>
-	<p>Реляционные базы данных, как мы уже знаем, состоят из таблиц. Каждая таблица состоит из столбцов (их называют полями или атрибутами) и строк (их называют записями или кортежами)</p>
-</section>
-<section class="slide">
 	<h2>Зачем мне БД?</h2>
 	<ul>
 		<li>Восстановление после сбоев</li>
@@ -310,9 +320,13 @@
 	<h2>Когда мне не нужна БД?</h2>
 	<ul>
 		<li>Структура данных очень простая</li>	
-		<li class="next">Приложение не расчитано на высокую производительность</li>
-		<li class="next">Отсутсвие конуренции в работе с данным</li>
+		<li class="next">Приложение не рассчитано на высокую производительность</li>
+		<li class="next">Отсутствие конкуренции в работе с данным</li>
 	</ul>
+</section>
+<section class="slide">
+	<h2>Реляционные БД</h2>
+	<p>Реляционные базы данных, как мы уже знаем, состоят из таблиц. Каждая таблица состоит из столбцов (их называют полями или атрибутами) и строк (их называют записями или кортежами)</p>
 </section>
 <section class="slide">
 	<h2>Таблица в БД</h2>
@@ -462,7 +476,7 @@
 </section>
 <section class="slide">
 	<h2>Первичный ключ</h2>
-	<p>Применяется для уникальной идентификации записи в таблице. В таблице не может быть две одинаковых записи с таким значеним.</p>
+	<p>Применяется для уникальной идентификации записи в таблице. В таблице не может быть две одинаковых записи с таким значением.</p>
 	<p class="next">Может быть составным</p>
 	<table>
 		<thead>Пользователи</thead>
@@ -522,12 +536,13 @@
 </section>
 <section class="slide">
 	<h2>Суррогатные первичные ключи и AUTO_INCREMENT</h2>
-	<p>Сурогатные ключи - уникальное поле, единственным призванием которого является уникальность в рамках этой таблицы.</p>
+	<p>Суррогатные ключи - уникальное поле, единственным призванием которого является уникальность в рамках этой таблицы.</p>
 	<p>Автоинкремент - увеличение числа на единицу для каждого нового значения.</p>
 </section>
 <section class="slide">
 	<h2>Проектирование</h2>
-	<a href="http://www.web2py.com/sqldesigner">Онлайн дизайнер</a>
+	<p><a href="http://www.web2py.com/sqldesigner">Онлайн дизайнер</a></p>
+	<p>Создайте структуру таблиц для блога</p>
 </section>
 <section class="slide">
 	<h2>CRUD</h2>
@@ -541,20 +556,20 @@
 <section class="slide">
 	<h2>Практическая работа SQL</h2>
 	<ul>
+		<li><a href="/exercise/day13.sql.tar.gz">Архив</a></li>
 		<li>Создание БД</li>
 		<li>Установка дампа базы данных из файла</li>
 		<li>Вывод списка БД и списка таблиц</li>
 		<li>INSERT</li>
-		<li>SELECT * FROM tbl</li>
-		<li>SELECT * FROM tbl WHERE </li>
+		<li>SELECT</li>
 		<li>UPDATE</li>
 		<li>PDO на php</li>
 	</ul>
 </section>
 <section class="slide">
 	<h2>Создание БД</h2>
-	<p>CREATE DATABASE mydb </p>
-	<p>DEFAULT CHARACTER SET utf8</p>
+	<p>CREATE DATABASE mydb;</p>
+	<p>DEFAULT CHARACTER SET utf8;</p>
 	<p>DEFAULT COLLATE utf8_general_ci;</p>
 </section>
 <section class="slide">
@@ -567,8 +582,7 @@
 </section>
 <section class="slide">
 	<h2>Домашнее задание</h2>
-
-	<a href="https://docs.google.com/document/d/1qOYi8PWVPjViX7ZxqO6UJjlgXn_pJmpGp3kE9BYP3Nc/edit">Домашнее задание</a>
+	<p>Задачник День 13</p>
 </section>
 		<p class="badge">./
 			<a href="https://github.com/shower/shower">Fork me on GitHub</a>
