@@ -41,170 +41,36 @@
 			}
 		</style>
 	</section>
-<section class="slide">
-	<h2>Тесты</h2>
-	<pre>
-		<code>$arr = [1];</code>
-		<code>$arr[] = 3;</code>
-		<code>echo $arr[1];</code>
-		<code class="next">var_dump($arr);</code>
-	</pre>
+<section class="slide black" id="cover-php">
+	<style>
+	#cover-php h2 {
+		color: rgba(255, 255, 255, .7);
+	}
+	</style>
+	<h2 class="shout">HTML</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
 </section>
 <section class="slide">
-	<h2>Тесты</h2>
-	<pre>
-		<code>$arr = array("t", "s", "o", "t");</code>
-		<code>$arr = array_reverse($arr);</code>
-		<code>foreach ($arr as $el) {</code>
-		<code>	echo $el;</code>
-		<code>}</code>
-	</pre>
+	<h2>Адаптивная верстка</h2>
+	<p>
+		Адаптивная вёрстка сайта позволяет веб-страницам автоматически подстраиваться под экраны планшетов и смартфонов. 
+	</p>
+	<p class="next">
+		Адаптивная вёрстка предполагает отсутствие горизонтальной полосы прокрутки и масштабируемых областей при просмотре на любом устройстве, читабельный текст и большие области для кликабельных элементов.
+	</p>
 </section>
 <section class="slide">
-	<h2>Тесты</h2>
-	<pre>
-		<code>$arr = array("f");</code>
-		<code>foreach($arr as $k => $v) {</code>
-		<code>	$arr[$k] = "g";</code>
-		<code>}</code>
-		<code>echo $arr[0];</code>
-	</pre>
-</section>		
-<section class="slide">
-	<h2>Тесты	</h2>
-		<pre>
-		<code>class Bubble {</code>
-		<code>	public $var = "test";</code>	
-		<code>	static function test(){</code>
-		<code>		echo $this->var;</code>
-		<code>	}</code>
-		<code>}</code>
-		<code>Bubble::test();</code>
-		</pre>	
+	<h2>Практическая работа</h2>
+	<a href="exercise/adaptiv/shablon.tar.gz">Шаблон</a>
 </section>
-<section class="slide">
-	<h2>Тесты	</h2>
-		<pre>
-		<code>class Bubble {</code>
-		<code>	public $var = "test";</code>	
-		<code>	static function test(){</code>
-		<code>		echo self::var;</code>
-		<code>	}</code>
-		<code>}</code>
-		<code>Bubble::test();</code>
-		</pre>	
-</section>
-<section class="slide">
-	<h2>Тесты	</h2>
-		<pre>
-		<code>class Bubble {</code>
-		<code>  public $size = 10;</code>
-		<code>	function __construct($size){</code>
-		<code>		echo "test";</code>
-		<code>	}</code>
-		<code>}</code>
-		<code>$bubble = new Bubble(30);</code>
-		<code>echo $bubble->size;</code>
-		</pre>	
-</section>
-<section class="slide">
-	<h2>Тесты</h2>
-	<pre>
-		<code>abstract class Test {</code>
-		<code>	abstract public function hello();</code>
-		<code>}</code>
-		<code>$test = new Test;</code>
-		<code>$test->hello();</code>
-	</pre>
-</section>
-<section class="slide">
-	<h2>Тесты</h2>
-	<pre>
-		<code>class ChildTest extends Test {</code>
-		<code>	function hello(){</code>
-		<code>		echo "Hello";</code>
-		<code>	}</code>
-		<code>}</code>
-		<code>$childTest = new ChildTest;</code>
-		<code>$childTest->hello();</code>
-	</pre>
-</section>
-<section class="slide">
-	<h2>Тесты</h2>
-	<pre>
-		<code>function test(Test $a){</code>
-		<code>	$a->hello();</code>
-		<code>}</code>
-		<code>test($childTest);</code>
-		<code>$article = new Article();</code>
-		<code>test($article);</code>
-	</pre>
-</section>
-<section class="slide">
-	<h2>Тесты</h2>
-	<pre>
-		<code>class SecondChildTest extends Test {</code>
-		<code>	function hi(){</code>
-		<code>		echo "Hello";</code>
-		<code>	}</code>
-		<code>}</code>
-		<code>$secondChildTest = new SecondChildTest;</code>
-		<code>$secondChildTest->hi();</code>
-	</pre>
-</section>
-<section class="slide">
-	<h2>Тест</h2>
-	<pre>
-		<code>interface IBook {</code>
-		<code>	public function sold();</code>
-		<code>}</code>
-	</pre>		
-</section>
-<section class="slide">
-	<h2>Тест</h2>
-	<pre>
-		<code>class Book  implements IBook {</code>
-		<code>	public funtion sold() {</code>
-		<code>		echo "book solded";</code>
-		<code>	}</code>
-		<code>}</code>
-		<code>$book = new Book();</code>
-		<code>$book->sold();</code>
-	</pre>
-</section>
-<section class="slide">
-	<h2>Тест</h2>
-	<pre>
-		<code>class Book  implements IBook {</code>
-		<code>	public funtion save() {</code>
-		<code>		echo "book saved";</code>
-		<code>	}</code>
-		<code>}</code>
-		<code>$book = new Book();</code>
-		<code>$book->save();</code>
-	</pre>
-</section>
-<section class="slide">
-	<h2>Тесты</h2>
-	<ol>
-		<li>.main {position: relative; left: 10px;}</li>
-		<li class="next">.main {position: relative; left: 10px;}</li>
-		<li class="next">.main {position: absolute; top: 10px;}</li>
-		<li class="next">.main {position: static; top: 10px;}</li>
-		<li class="next">.main {position: fixed; top: 20px;}</li>
-		<li class="next">.main {position: fixed; left: 20px;}</li>
-	</ol>
-</section>
-<section class="slide">
-	<h2>Тесты</h2>
-	<ul>
-		<li>SELECT * FROM client;</li>
-		<li class="next">SELECT id, title FROM posts WHERE date >= "2017-10-10";</li>
-		<li class="next">UPDATE clients SET name = "admin" WHERE id = 1;</li>	
-		<li class="next">UPDATE orders SET quantity = 5 WHERE id = 12;</li>	
-		<li class="next">UPDATE orders SET quantity = quantity + 4 WHERE id = 12;</li>	
-		<li class="next">INSERT INTO client SET name = 'admin', role = 'administrator';</li>		
-	</ul>
+<section class="slide black" id="cover-php">
+	<style>
+	#cover-php h2 {
+		color: rgba(255, 255, 255, .7);
+	}
+	</style>
+	<h2 class="shout">PHP</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
 </section>
 <section class="slide">
 	<h2>Фреймворк</h2>
