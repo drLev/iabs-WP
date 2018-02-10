@@ -41,16 +41,95 @@
 			}
 		</style>
 	</section>
-<section class="slide">
-<h2>Объявление</h2>
-<ul>
-	<li>Объектно-ориентированное мышление(Мэтт Вайсфельд)</li>
-	<li>Дизайнеров осталось 5, вас 11</li>
-	<li>Дизайнеры будут работать с лучшими</li>
-	<li>После курса будет организована практика</li>
-</ul>
+<section class="slide black">
+	<style>
+	#cover h2 {
+		color: rgba(255, 255, 255, .7);
+	}
+	</style>
+	<h2 class="shout">Javascript</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
 </section>	
-<section class="slide black" id="cover">
+<section class="slide">
+	<h2>Javascript</h2>
+	<p>JavaScript ("JS" для краткости) — это полноценный динамический язык программирования, который применяется к HTML документу, и может обеспечить динамическую интерактивность на веб-сайтах. Его разработал Brendan Eich, сооснователь проекта Mozilla, Mozilla Foundation и Mozilla Corporation.</p>
+</section>
+<section class="slide">
+	<h2>Задачи</h2>
+	<p>
+Вы можете сделать очень многое с JavaScript. Вы можете начать с малого, с простых функций, таких как карусели, галереи изображений, изменяющиеся макеты и отклик на нажатие кнопок. Когда вы станете более опытным в языке, вы сможете создавать игры, анимированную 2D и 3D графику, полномасштабные приложения с базами данных и многое другое!
+	</p>
+</section>
+<section class="slide">
+	<h2>Использование</h2>
+	<p>Подключить внешний скрипт</p>
+	<pre><code>&lt;script src=&quot;file.js&quot;&gt;&lt;/script&gt;</code></pre>
+	<p class="next">Инлайново</p>
+	<pre class="next"><code>&lt;script&gt;alert( 1 );&lt;/script&gt;</code></pre>
+</section>
+<section class="slide">
+	<h2>Переменные и комментарии</h2>
+	<pre>	
+	<code>var myVariable;</code>
+	<code>myVariable = 'Bob';</code>
+	<code>var myVariable = 'Bob';</code>
+	<code class="next"><markup class="comment">//Комментарии как в php</markup></code>
+	<code class="next"><markup class="comment">/* И многострочные есть */</markup></code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Типы</h2>
+	<ul>
+		<li>String</li>	
+		<li>Number</li>	
+		<li>Boolean</li>	
+		<li>Array</li>	
+		<li>Object	</li>		
+	</ul>
+</section>
+<section class="slide">
+	<h2>Условия</h2>
+	<pre>
+		<code>var iceCream = 'chocolate';</code>
+		<code>if (iceCream === 'chocolate') {</code>
+		<code>  alert('Yay, I love chocolate ice cream!');</code>
+		<code>} else {</code>
+		<code>  alert('Awwww, but chocolate is my favorite...');</code>
+		<code>}</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Функции</h2>
+	<pre>
+		<code>function multiply(num1,num2) {</code>
+		<code>  var result = num1 * num2;</code>
+		<code>  return result;</code>
+		<code>}</code>
+		<code>multiply(4,7);</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>События</h2>
+	<p>Для создания действительной интерактивности на веб-сайте, вам необходимы события — это структура, которая слушает то, что происходит в браузере, а затем позволяет вам запускать код в ответ на это. Наиболее очевидным является событие клика, которое вызывается браузером, когда мы щёлкаем по чему-то мышью.</p>
+</section>
+<section class="slide">
+	<h2>Пример событий</h2>
+	<pre>
+		<code>var myHTML = document.querySelector('html');</code>
+		<code>myHTML.onclick = function() {};	</code>	
+	</pre>
+</section>
+<section class="slide">
+	<h2>Практическая работа</h2>
+	<ul>
+		<li>alert(“Hello World”);</li>
+		<li>Объявление переменных</li>
+		<li>Операции с переменными. Арифметика, конкатенация.</li>
+		<li>Цикл for</li>
+		<li>Написание своей функции</li>		
+	</ul>
+</section>
+<section class="slide black">
 	<style>
 	#cover h2 {
 		color: rgba(255, 255, 255, .7);
@@ -151,7 +230,7 @@
 		<code>SELECT MAX(age) FROM students;</code>
 	</pre>
 </section>
-<section class="slide" id="cover">
+<section class="slide black">
 	<style>
 	#cover h2 {
 		color: rgba(255, 255, 255, .7);
@@ -206,10 +285,10 @@
 	<ol>
 		<li>добавить form-success.php для успешного сохранения</li>
 		<li>добавить вывод form-success если форма валидна</li>
+		<li>сохранить в форму в файл</li>
 		<li>добавить поле name на форму</li>
-		<li>прописать подключение к БД</li>
-		<li>создать таблицу для хранения формы</li>
-		<li>добавить метод save модели, который сохранит форму в БД</li>
+		<li>добавить метод save модели</li>
+		<li>навести порядок в коде</li>
 	</ol>
 </section>
 <section class="slide">

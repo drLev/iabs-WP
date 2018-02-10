@@ -41,13 +41,7 @@
 			}
 		</style>
 	</section>
-<section class="slide">
-	<h2>Объявление</h2>
-	<ul>
-		<li>Практика: 4 могут получить практику в организациях.</li>
-	</ul>
-</section>	
-<section class="slide black" id="cover">
+<section class="slide black">
 	<style>
 	#cover h2 {
 		color: rgba(255, 255, 255, .7);
@@ -57,11 +51,11 @@
 	<img src="pictures/code.jpg" alt="" class="cover">
 </section>
 <section class="slide">
-	<h2>Самостоятельная</h2>
+	<h2>Самостоятельная работа</h2>
 	<ol>
-		<li>Скачать <a href="https://github.com/otis22/iabs-webprogrammers">проект</a></li>
+		<li>Скачать <a href="exercise/day17/clients.sql.tar.gz">Архив</a></li>
 		<li>Создать новую БД clients</li>
-		<li>Установить в неё дамп clients.sql students/src/sql/</li>
+		<li>Установить в неё дамп clients.sql</li>
 		<li>Выбрать всех клиентов по фамилии Иванов</li>
 		<li>Выбрать все города Днепропетровской области</li>
 		<li>Выбрать всех клиентов у которых телефон заканчивается на 2</li>
@@ -72,7 +66,7 @@
 	<p>У нас есть таблица Клиенты в которой есть поле ИД города. И есть таблица Города, в которой хранится название города и другая информация о нем. Мы хотим написать запрос, который выведет таблицу в 2 колонки Фамилию и Город</p>
 </section>
 <section class="slide">
-	<img src="pictures/day17/day17.jpg" alt="">
+	<img src="pictures/day17/day17.jpg" style="width: 100%;">
 </section>
 <section class="slide">
 	<h2>SQL Запрос</h2>
@@ -97,7 +91,7 @@
 		<li>Выбрать всех клиентов из городов с населением более 500 000 </li>
 		<li>Выбрать всех клиентов со статусом Сохранен</li>
 		<li>Выбрать всех клиентов со статусом Активен из города Киев</li>
-		<li>Посчитать сумму счетов по всем клиентам</li>
+		<li>Посчитать сумму счетов для каждого клиента используя GROUP BY</li>
 		<li>Посчитать средний чек по всем клиентам из Киева</li>
 	</ol>
 </section>
@@ -108,6 +102,9 @@
 	<p>Мы не увидим в нашем запросе клиентов без города</p>
 </section>
 <section class="slide">
+	<img src="pictures/day17/joins.png" style="width: 100%; position: relative; top: -15%" alt="">
+</section>
+<section class="slide">
 	<h2>Практическая работа</h2>
 	<ul>
 		<li>У одного из клиентов выставить город в NULL</li>
@@ -116,7 +113,7 @@
 		<li>Переписать запрос так, чтобы вывести в том числе и города без клиентов</li>
 	</ul>
 </section>
-<section class="slide black" id="cover">
+<section class="slide black">
 	<style>
 	#cover h2 {
 		color: rgba(255, 255, 255, .7);
@@ -136,9 +133,13 @@
 <section class="slide">
 	<h2>Без AR</h2>
 	<pre>
-		<code>$db->createCommand('INSERT INTO `customer` (`name`) VALUES (:name)', [</code>
-		<code>    ':name' => 'Qiang',</code>
-		<code>])->execute();	</code>	
+		<code>$db = Yii::$app->db;</code>
+		<code>$db->createCommand(</code>
+		<code>    'INSERT INTO `customer` (`name`) VALUES (:name)',</code>
+		<code>    [':name' => 'Qiang']</code>
+		<code>)->execute();	</code>	
+		<code class="next">$customers = $db->createCommand("SELECT * FROM customer")</code>
+		<code class="next">->queryAll()</code>
 	</pre>
 </section>
 <section class="slide">
@@ -164,7 +165,7 @@
 <section class="slide">
 	<h2>Практическая работа 1</h2>
 	<ol>
-		<li>Создать таблицу emails</li> 
+		<li>Создать таблицу email</li> 
 		<li>Генерация модели и формы для страницы “Мы с вами свяжемся”</li>
 		<li>Добавление валидации email</li>
 		<li>Добавление действия контроллера</li>
@@ -173,14 +174,14 @@
 <section class="slide">
 	<h2>Практическая работа 2</h2>
 	<ol>
-		<li>Создать таблицу students</li> 
+		<li>Создать таблицу student</li> 
 		<li>Создать связанную таблицу home_work</li>
 		<li>Сгенерировать crud для таблиц</li>
 	</ol>
 </section>
 <section class="slide">
 	<h2>Домашнее задание</h2>
-	<a href="https://docs.google.com/document/d/1Cn39aGwL-UaIA8AbGM6f4geZg6J1ygJfCNLgkRavW-c/edit">Документ</a>
+	<p>Задачник День 17</p>
 </section>
 		<p class="badge">
 			<a href="https://github.com/shower/shower">Fork me on GitHub</a>
