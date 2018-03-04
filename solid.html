@@ -529,7 +529,7 @@
 		<pre>
 			<code>class UnisenderGateway implements SmsGateway ...</code>
 			<code>class SmsCenterGateway implements SmsGateway  ...</code>
-			<code>class SendHelloSms {</code>
+			<code>class HelloSms {</code>
 			<code>	public function onClientCreate($event){</code>
 			<code>		$this->smsGateway->send($this->getSms($event));</code>
 			<code>	}</code>
@@ -544,7 +544,7 @@
 			<code>class Mailchimp implements MessageGateway;</code>
 			<code>class Mandrill implements MessageGateway;</code>
 			<code></code>
-			<code>class SendHelloMessage {</code>
+			<code>class HelloMessage {</code>
 			<code>	public function __construct($messageGateway, $messageFactory){}</code>
 			<code>	public function onClientCreate($event){</code>
 			<code>		$message = $this->messageFactory->create($event);</code>
