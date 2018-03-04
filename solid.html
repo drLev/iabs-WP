@@ -402,7 +402,7 @@
 			<code class="next">$export = new RemoteFileSystemExport($odt, new FTPUploader());</code>
 			<code class="next">$export = new RemoteFileSystemExport($csv, new DropboxUploader());</code>
 			<code class="next">$export = CacheExport($export);</code>
-			<code class="next">$export = LastClientVisitExport($extport);</code>
+			<code class="next">$export = LastClientVisitExport($export);</code>
 			<code>$url = $export->export($columns, $data);</code>
 		</pre>
 	</section>	
