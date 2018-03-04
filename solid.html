@@ -183,7 +183,7 @@
 			<code>    $clientRow->save();</code>
 			<code>    $this->afterEdit($clientRow);</code>
 			<code>}</code>
-			<code>protected function afterEdit(){</code>
+			<code>protected function afterEdit($clientRow){</code>
 			<code>    (new ClientEvent('edit', $clientRow))->fire();</code>
 			<code>}</code>
 		</pre>
@@ -412,7 +412,7 @@
 			<li>Функции, которые используют базовый тип, должны иметь возможность использовать подтипы базового типа, не зная об этом</li>
 			<li class="next">Если метод класса из иерархии возвращает массив - другие не могут вернуть объект или строку</li>
 			<li class="next">Если метод класса из иерархии возвращает true|false - другие не могут бросать Exception</li>
-			<li class="next">Если интерфейс предка отличается от родителя - это не предок	</li>
+			<li class="next">Если интерфейс предка отличается от родителя - это не предок(возможно)</li>
 		</ul>	
 	</section>
 	<section class="slide">
@@ -427,6 +427,43 @@
 			<code>if ($obj instanceof 'AnotherClass') $obj->afterDo();</code>
 		</pre>
 	</section>
+	<section class="slide">
+		<h2>Принцип разделения интерфейса (Interface segregation)</h2>
+		<p>Данный принцип гласит, что «Много специализированных интерфейсов лучше, чем один универсальный»
+Соблюдение этого принципа необходимо для того, чтобы классы-клиенты использующий/реализующий интерфейс знали только о тех методах, которые они используют, что ведёт к уменьшению количества неиспользуемого кода.</p>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Проблема</h2>
+	</section>
+	<section class="slide">
+	<pre>
+		<code>interface IItem {</code>
+		<code>	public function applyDiscount($discount);</code>
+		<code>	public function applyPromocode($promocode);</code>
+		<code>	public function setColor($color);</code>
+		<code>	public function setSize($size);		</code>	
+		<code>	public function setCondition($condition);</code>
+		<code>	public function setPrice($price);</code>
+		<code>}		</code>
+	</pre>
+	</section>
+	<section class="slide">
+		<img src="pictures/solid/refactorman.jpg" alt="" class="refuctorman">
+	</section>
+	<section class="slide">
+		<pre>
+			<code>interface IItem {</code>
+			<code>	public function setCondition($condition);</code>
+			<code>	public function setPrice($price);</code>
+			<code>}</code>
+			<code>interface IClothes {</code>
+			<code>	public function setColor($color);</code>
+			<code>	public function setSize($size);</code>
+			<code>	public function setMaterial($material);</code>
+			<code>}</code>
+			<code>interface IDiscountable ...</code>
+		</pre>		
+	</section>	
 	<section class="slide">
 		<h2>Принцип инверсии зависимостей (Dependency Invertion)</h2>
 		<p>Принцип гласит — «Зависимости внутри системы строятся на основе абстракций. Модули верхнего уровня не зависят от модулей нижнего уровня. Абстракции не должны зависеть от деталей. Детали должны зависеть от абстракций». Данное определение можно сократить — «зависимости должны строится относительно абстракций, а не деталей».</p>
