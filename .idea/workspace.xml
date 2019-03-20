@@ -2,64 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9b27472-2bfe-44b2-984a-490d92f242a0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/shower.iml" afterPath="$PROJECT_DIR$/.idea/shower.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LICENSE.md" afterPath="$PROJECT_DIR$/LICENSE.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day10.html" afterPath="$PROJECT_DIR$/day10.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day11.html" afterPath="$PROJECT_DIR$/day11.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day12.html" afterPath="$PROJECT_DIR$/day12.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day13.html" afterPath="$PROJECT_DIR$/day13.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day14.html" afterPath="$PROJECT_DIR$/day14.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day15.html" afterPath="$PROJECT_DIR$/day15.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day16.html" afterPath="$PROJECT_DIR$/day16.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day17.html" afterPath="$PROJECT_DIR$/day17.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day18.html" afterPath="$PROJECT_DIR$/day18.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day9.html" afterPath="$PROJECT_DIR$/day9.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/design.html" afterPath="$PROJECT_DIR$/design.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercise/Day13.txt" afterPath="$PROJECT_DIR$/exercise/Day13.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercise/day11/article.php" afterPath="$PROJECT_DIR$/exercise/day11/article.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercise/day11/articles/1.txt" afterPath="$PROJECT_DIR$/exercise/day11/articles/1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercise/day11/articles/2.txt" afterPath="$PROJECT_DIR$/exercise/day11/articles/2.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercise/day11/articles/3.txt" afterPath="$PROJECT_DIR$/exercise/day11/articles/3.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercise/day11/articles/4.txt" afterPath="$PROJECT_DIR$/exercise/day11/articles/4.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercise/day11/classes/ArticlePage.php" afterPath="$PROJECT_DIR$/exercise/day11/classes/ArticlePage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercise/day11/classes/IndexPage.php" afterPath="$PROJECT_DIR$/exercise/day11/classes/IndexPage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercise/day11/classes/OneArticle.php" afterPath="$PROJECT_DIR$/exercise/day11/classes/OneArticle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercise/day11/classes/Page.php" afterPath="$PROJECT_DIR$/exercise/day11/classes/Page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercise/day11/classes/loader.php" afterPath="$PROJECT_DIR$/exercise/day11/classes/loader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercise/day11/index.php" afterPath="$PROJECT_DIR$/exercise/day11/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercise/day14/logger.mdj" afterPath="$PROJECT_DIR$/exercise/day14/logger.mdj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exercise/dz/roboschool/text.txt" afterPath="$PROJECT_DIR$/exercise/dz/roboschool/text.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackaton-arduino.html" afterPath="$PROJECT_DIR$/hackaton-arduino.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meetup.html" afterPath="$PROJECT_DIR$/meetup.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mystyle/my.css" afterPath="$PROJECT_DIR$/mystyle/my.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openlesson.html" afterPath="$PROJECT_DIR$/openlesson.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pictures/design/dog.sql" afterPath="$PROJECT_DIR$/pictures/design/dog.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shower/shower.min.js" afterPath="$PROJECT_DIR$/shower/shower.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shower/themes/iabs/LICENSE.md" afterPath="$PROJECT_DIR$/shower/themes/iabs/LICENSE.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shower/themes/iabs/README.md" afterPath="$PROJECT_DIR$/shower/themes/iabs/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shower/themes/iabs/images/ribbon.svg" afterPath="$PROJECT_DIR$/shower/themes/iabs/images/ribbon.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shower/themes/iabs/index.html" afterPath="$PROJECT_DIR$/shower/themes/iabs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shower/themes/iabs/styles/my.css" afterPath="$PROJECT_DIR$/shower/themes/iabs/styles/my.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shower/themes/iabs/styles/screen-16x10.css" afterPath="$PROJECT_DIR$/shower/themes/iabs/styles/screen-16x10.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shower/themes/iabs/styles/screen-4x3.css" afterPath="$PROJECT_DIR$/shower/themes/iabs/styles/screen-4x3.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shower/themes/material/LICENSE.md" afterPath="$PROJECT_DIR$/shower/themes/material/LICENSE.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shower/themes/material/README.md" afterPath="$PROJECT_DIR$/shower/themes/material/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shower/themes/material/fonts/LICENSE.txt" afterPath="$PROJECT_DIR$/shower/themes/material/fonts/LICENSE.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shower/themes/material/index.html" afterPath="$PROJECT_DIR$/shower/themes/material/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shower/themes/material/styles/screen-16x10.css" afterPath="$PROJECT_DIR$/shower/themes/material/styles/screen-16x10.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shower/themes/material/styles/screen-4x3.css" afterPath="$PROJECT_DIR$/shower/themes/material/styles/screen-4x3.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shower/themes/ribbon/LICENSE.md" afterPath="$PROJECT_DIR$/shower/themes/ribbon/LICENSE.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shower/themes/ribbon/README.md" afterPath="$PROJECT_DIR$/shower/themes/ribbon/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shower/themes/ribbon/index.html" afterPath="$PROJECT_DIR$/shower/themes/ribbon/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shower/themes/ribbon/styles/screen-16x10.css" afterPath="$PROJECT_DIR$/shower/themes/ribbon/styles/screen-16x10.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shower/themes/ribbon/styles/screen-4x3.css" afterPath="$PROJECT_DIR$/shower/themes/ribbon/styles/screen-4x3.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solid.html" afterPath="$PROJECT_DIR$/solid.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ВП1/dz17.html" afterPath="$PROJECT_DIR$/ВП1/dz17.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -93,8 +36,8 @@
       <file leaf-file-name="day15.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/day15.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="134" column="107" lean-forward="false" selection-start-line="134" selection-start-column="107" selection-end-line="134" selection-end-column="107" />
+            <state relative-caret-position="509">
+              <caret line="133" column="4" lean-forward="false" selection-start-line="133" selection-start-column="4" selection-end-line="133" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -160,7 +103,22 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="presentations.loc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="presentations.loc" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="presentations.loc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="presentations.loc" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ВП1" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
@@ -261,12 +219,12 @@
       <updated>1505216411821</updated>
       <workItem from="1505216413127" duration="19000" />
       <workItem from="1552941932062" duration="3525000" />
-      <workItem from="1553086853838" duration="551000" />
+      <workItem from="1553086853838" duration="819000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4095000" />
+    <option name="totallyTimeSpent" value="4363000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="43" y="-4" width="1877" height="1084" extended-state="6" />
@@ -279,7 +237,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -375,8 +333,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day15.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="134" column="107" lean-forward="false" selection-start-line="134" selection-start-column="107" selection-end-line="134" selection-end-column="107" />
+        <state relative-caret-position="509">
+          <caret line="133" column="4" lean-forward="false" selection-start-line="133" selection-start-column="4" selection-end-line="133" selection-end-column="4" />
           <folding />
         </state>
       </provider>
