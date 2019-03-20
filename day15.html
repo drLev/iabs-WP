@@ -89,59 +89,50 @@
 	</ul>
 </section>
 <section class="slide">
-	<h2>Установка Yii</h2>
-	<ul>
-		<li>https://github.com/yiisoft/yii2/blob/master/docs/guide-ru/start-installation.md</li>
-	</ul>
-</section>
-<section class="slide">
 	<h2>Composer</h2>
 	<p>cd ~/myprojects</p>
 	<p>curl -sS https://getcomposer.org/installer | php</p>
 	<p>sudo mv composer.phar /usr/local/bin/composer</p>
 </section>
 <section class="slide">
-	<h2>Дальше</h2>
+	<h2>GitHub</h2>
 	<p>Регистрация в github</p>
-	<p>composer global require fxp/composer-asset-plugin</p>
-	<p>composer create-project --prefer-dist yiisoft/yii2-app-basic yiitest</p>
+	<p>https://github.com/</p>
 </section>
 <section class="slide">
-	<h2>Дальше</h2>
-	<p>cd yiitest</p>
-	<p>php requirements.php</p>
-	<p>sudo apt-get install sqlite3 libsqlite3-dev php-sqlite3</p>
-	<p>php yii serve</p>
+	<h2>Установка Laravel</h2>
+	<ul>
+		<li>https://laravel.com/docs/5.8/installation</li>
+		<li class="next">composer <u>global</u> require laravel/installer<br/>laravel new [PROJECT_NAME]</li>
+		<li class="next">composer create-project --prefer-dist laravel/laravel [PROJECT_NAME]</li>
+		<li class="next">php artisan key:generate</li>
+		<li>.env APP_KEY=YOUR_GENERATED_KEY</li>
+	</ul>
 </section>
 <section class="slide">
-	<h2>Дальше</h2>
-	<p>Включить милые ссылки в конфиге config/web.php</p>
-	<p>Создать файл .htaccess в папке web</p>
-	<p style="font-size: 8px;">
-	RewriteEngine on <br>
-    # Если запрашиваемая в URL директория или файл существуют обращаемся к ним напрямую<br>
-    RewriteCond %{REQUEST_FILENAME} !-f<br>
-    RewriteCond %{REQUEST_FILENAME} !-d<br>
-    # Если нет - перенаправляем запрос на index.php<br>
-    RewriteRule . index.php<br>
-	</p>
+	<h2>Роутинг</h2>
+	<ul>
+		<li>app/Http/routes.php</li>
+		<li class="next">Route::get('/', function () { return 'Hello World'; });</li>
+		<li class="next">Route::post('/', function () { return view('welcome'); });</li>
+		<li class="next">Route::get('/user', 'UserController@index');</li>
+		<li class="next">Route::get('/user/{id}', function ($id) { return $id; });</li>
+		<li class="next">Route::post('/auth/{login?}/{password?}', function ($login = '', $password = '') { return $id; });</li>
+	</ul>
 </section>
 <section class="slide">
-	<h2>Дальше</h2>
-	<p>Логи /var/log/apache2$ tail error.log</p>
-	<p>Включить rewrite</p>
-	<p>sudo a2enmod rewrite</p>
-	<p>Редактировать about.php</p>
-</section>
-<section class="slide">
-	<h2>Дальше</h2>
-	<p>Добавить свой контроллер и экшны и вью к ним</p>
-	<p>Добавить экшны в навигацию</p>
-	<p>Научиться получать $_GET параметры</p>
+	<h2>MVC</h2>
+	<ul>
+		<li>app/Http/ModelName.php</li>
+		<li>app/Http/Controllers/ControllerName.php</li>
+		<li>resources/views/viewName.html</li>
+	</ul>
 </section>
 <section class="slide">
 	<h2>Домашнее задание</h2>
-	<a href="https://docs.google.com/document/d/1DRjfcpn77AOG_vafQt-tiBPgatveDpM5q6uH2Jhcnbs/edit">Документ</a>
+	<a href="https://docs.google.com/document/d/14aTey-ztID5UoKRUBhzu6zE-RAcyXvhERiKw7qVqyUI/edit?usp=sharing">Документ</a>
+
+	<a href="https://www.youtube.com/watch?v=nWo5vHkOyBk&list=PL9ogRqeIEMzntnGiOj0tHu0o2ldxWWtJR">Уроки по Laravel</a>
 </section>
 		<p class="badge">
 			<a href="https://github.com/shower/shower">Fork me on GitHub</a>
