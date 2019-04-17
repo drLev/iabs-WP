@@ -8,44 +8,44 @@
 	<link rel="stylesheet" href="shower/themes/iabs/styles/screen-16x10.css">
 	<link rel="stylesheet" href="shower/themes/iabs/styles/my.css">
 <body class="shower list">
-	<header class="caption">
-		<h1>Shower Presentation Engine</h1>
-		<p>Yours Truly, Famous Inc.</p>
-	</header>
-	<section class="slide" id="cover">
-		<h2>День 18</h2>
-		<img src="pictures/iabs2.jpg" alt="" class="cover">
-		<!--
-			To apply styles to the certain slides
-			set slide ID to get needed elements
-		-->
-		<style>
-			.corp-cube {
-				background-color: #FEDB37;
-				width: 300px;
-				height: 300px;
-				padding: 10px;
-				margin: 0 auto;
-			}
-			.corp-bgc {
-				background-color: #FEDB37;
-			}
-			#cover {
-				background-color: #FEDB37;
-			}
-			#cover h2 {
-				margin:30px 0 0;
-				color:#FFF;
-				text-align:center;
-				font-size:70px;
-			}
-		</style>
-	</section>
+<header class="caption">
+	<h1>Shower Presentation Engine</h1>
+	<p>Yours Truly, Famous Inc.</p>
+</header>
+<section class="slide" id="cover">
+	<h2>День 18</h2>
+	<img src="pictures/iabs2.jpg" alt="" class="cover">
+	<!--
+        To apply styles to the certain slides
+        set slide ID to get needed elements
+    -->
+	<style>
+		.corp-cube {
+			background-color: #FEDB37;
+			width: 300px;
+			height: 300px;
+			padding: 10px;
+			margin: 0 auto;
+		}
+		.corp-bgc {
+			background-color: #FEDB37;
+		}
+		#cover {
+			background-color: #FEDB37;
+		}
+		#cover h2 {
+			margin:30px 0 0;
+			color:#FFF;
+			text-align:center;
+			font-size:70px;
+		}
+	</style>
+</section>
 <section class="slide black" id="cover">
 	<style>
-	#cover h2 {
-		color: rgba(255, 255, 255, .7);
-	}
+		#cover h2 {
+			color: rgba(255, 255, 255, .7);
+		}
 	</style>
 	<h2 class="shout">SQL</h2>
 	<img src="pictures/code.jpg" alt="" class="cover">
@@ -54,16 +54,16 @@
 	<h2>Сортировка</h2>
 	<pre>
 		<code>SELECT * FROM Customers</code>
-		<code>ORDER BY Country;</code>	
-		<code><mark class="comment">--Аналогично ORDER BY Сountry ASC</mark></code>	
+		<code>ORDER BY Country;</code>
+		<code><mark class="comment">--Аналогично ORDER BY Сountry ASC</mark></code>
 	</pre>
 </section>
 <section class="slide">
 	<h2>Обратная сортировка</h2>
 	<pre>
 		<code>SELECT * FROM Customers</code>
-		<code>ORDER BY Country DESC;</code>	
-	</pre>	
+		<code>ORDER BY Country DESC;</code>
+	</pre>
 </section>
 <section class="slide">
 	<h2>Сортировка по нескольким колонкам</h2>
@@ -79,25 +79,25 @@
 	<p  class="next">Выведем уникальные страны из таблицы покупатели</p>
 	<pre class="next"><code>SELECT DISTINCT Country FROM Customers;</code></pre>
 	<p class="next">Посчитаем уникальные страны</p>
-	<pre class="next"><code>SELECT COUNT(DISTINCT Country) FROM Customers;</code></pre>	
+	<pre class="next"><code>SELECT COUNT(DISTINCT Country) FROM Customers;</code></pre>
 </section>
 <section class="slide">
 	<h2>Объединяем результаты</h2>
 	<p>Не допускает дубли</p>
-	<pre>		
+	<pre>
 		<code>SELECT column_name(s) FROM table1</code>
 		<code>UNION</code>
-		<code>SELECT column_name(s) FROM table2;</code>		
+		<code>SELECT column_name(s) FROM table2;</code>
 	</pre>
 </section>
 <section class="slide">
 	<h2>Объединяем результаты</h2>
-	<pre>		
+	<pre>
 		<code>SELECT column_name(s) FROM table1</code>
 		<code>UNION ALL</code>
-		<code>SELECT column_name(s) FROM table2;</code>		
+		<code>SELECT column_name(s) FROM table2;</code>
 		<code>UNION ALL</code>
-		<code>SELECT column_name(s) FROM table3;</code>				
+		<code>SELECT column_name(s) FROM table3;</code>
 	</pre>
 </section>
 <section class="slide">
@@ -118,7 +118,7 @@
 		<code>WHERE condition</code>
 		<code>GROUP BY column_name(s)</code>
 		<code>HAVING condition</code>
-		<code>ORDER BY column_name(s);</code>		
+		<code>ORDER BY column_name(s);</code>
 	</pre>
 </section>
 <section class="slide">
@@ -128,7 +128,7 @@
 		<code>FROM Customers</code>
 		<code>GROUP BY Country</code>
 		<code>HAVING COUNT(CustomerID) > 5</code>
-		<code>ORDER BY COUNT(CustomerID) DESC;	</code>	
+		<code>ORDER BY COUNT(CustomerID) DESC;	</code>
 	</pre>
 </section>
 <section class="slide">
@@ -136,9 +136,9 @@
 	<pre>
 		<code>SELECT * FROM Products</code>
 		<code>WHERE Price BETWEEN 10 AND 20;</code>
-	</pre>	
+	</pre>
 	<pre>
- 		<code>OrderDate BETWEEN '2017-03-21' AND '2017-03-25'</code>		
+ 		<code>OrderDate BETWEEN '2017-03-21' AND '2017-03-25'</code>
 	</pre>
 </section>
 <section class="slide">
@@ -152,31 +152,107 @@
 </section>
 <section class="slide black" id="cover">
 	<style>
-	#cover h2 {
-		color: rgba(255, 255, 255, .7);
-	}
+		#cover h2 {
+			color: rgba(255, 255, 255, .7);
+		}
 	</style>
-	<h2 class="shout">Yii</h2>
+	<h2 class="shout">Laravel</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
+</section>
+
+<section class="slide">
+	<h2>Посредники</h2>
+	<p>
+		Посредники (англ. middleware) предоставляют удобный механизм для фильтрации HTTP-запросов вашего приложения.
+		Например, в Laravel есть посредник для проверки аутентификации пользователя.
+		Если пользователь не аутентифицирован, посредник перенаправит его на экран входа в систему.
+		Если же пользователь аутентифицирован, посредник позволит запросу пройти далее в приложение
+	</p>
+</section>
+<section class="slide">
+	<h2>Посредники</h2>
+	<p style="text-align: center;">
+		<img src="pictures/laravel-middleware.png" alt="">
+	</p>
+</section>
+<section class="slide">
+	<h2>Аутентицикация</h2>
+	<pre>
+		<code>php artisan make:auth</code>
+	</pre>
+	<p>"Из коробки" создаются необходимые файлы</p>
+	<ul>
+		<li>app/Http/Controllers/Auth</li>
+		<li>app/Http/Middleware/Authentificate.php</li>
+		<li>app/User.php</li>
+		<li>database/migrations/</li>
+		<li>resources/views/auth/</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Миграции</h2>
+	<p>Система контроля версий базы данных.</p>
+	<pre>
+		<code>php artisan migrate // Запустить миграции</code>
+		<code>php artisan migrate:rollback // откат последней миграции</code>
+		<code>php artisan migrate:reset // откат всех изменений</code>
+		<code>php artisan migrate:refresh // reset + migrate</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Практическая работа</h2>
+	<ul>
+		<li>Добавить авторизацию</li>
+		<li>В таблицу users добавить новое текстовое поле phone</li>
+	</ul>
+</section>
+<section class="slide black" id="cover">
+	<style>
+		#cover h2 {
+			color: rgba(255, 255, 255, .7);
+		}
+	</style>
+	<h2 class="shout">Git</h2>
 	<img src="pictures/code.jpg" alt="" class="cover">
 </section>
 <section class="slide">
-	<h2>Yii урок</h2>
-	<p>Создаем блог</p>
+	<h2>Git</h2>
+	<p>
+		<b>Git</b> - распределённая система управления версиями
+		(<a href="https://git-scm.com/book/ru/v1/">Документация</a>)
+	</p>
+	<pre>Самые частые команды:
+		<code>git pull // скачать все изменения</code>
+		<code>git add . // добавить в индексацию все текущие изменения</code>
+		<code>git commit // принять все изменения</code>
+		<code>git push // отправить на сервере все принятые изменения</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Практическая работа</h2>
+	<ul>
+		<li>Создать новый репозиторий</li>
+		<li>Привязать теекущий код к репозиторию</li>
+		<li>Выложить весь код в репозиторий</li>
+	</ul>
 </section>
 <section class="slide">
 	<h2>Домашнее задание</h2>
 	<p>Задачник День 18</p>
+	<p>Прочесть <a href="https://git-scm.com/book/ru/v1/">документацию</a> git</p>
+	<p>Создать новый репозиторий blog</p>
+	<p>Создать новый laravel проект blog, выложить на github</p>
 </section>
-		<p class="badge">
-			<a href="https://github.com/shower/shower">Fork me on GitHub</a>
-		</p>
-	<!--
-		To hide progress bar from entire presentation
-		just remJove “progress” element.
-	-->
-	<div class="progress"></div>
-	<script src="shower/shower.min.js"></script>
-	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
-	<!-- Photos by John Carey, fiftyfootshadows.net -->
+<p class="badge">
+	<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+</p>
+<!--
+    To hide progress bar from entire presentation
+    just remJove “progress” element.
+-->
+<div class="progress"></div>
+<script src="shower/shower.min.js"></script>
+<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+<!-- Photos by John Carey, fiftyfootshadows.net -->
 </body>
 </html>
