@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/screen-16x10.css">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/my.css">
+<body class="shower list">
+<header class="caption">
+	<h1>Shower Presentation Engine</h1>
+	<p>Yours Truly, Famous Inc.</p>
+</header>
+<section class="slide" id="cover">
+	<h2>День 21</h2>
+	<img src="pictures/iabs2.jpg" alt="" class="cover">
+	<!--
+        To apply styles to the certain slides
+        set slide ID to get needed elements
+    -->
+	<style>
+		.corp-cube {
+			background-color: #FEDB37;
+			width: 300px;
+			height: 300px;
+			padding: 10px;
+			margin: 0 auto;
+		}
+		.corp-bgc {
+			background-color: #FEDB37;
+		}
+		#cover {
+			background-color: #FEDB37;
+		}
+		#cover h2 {
+			margin:30px 0 0;
+			color:#FFF;
+			text-align:center;
+			font-size:70px;
+		}
+	</style>
+</section>
+<section class="slide black" id="cover">
+	<style>
+		#cover h2 {
+			color: rgba(255, 255, 255, .7);
+		}
+	</style>
+	<h2 class="shout">Laravel</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
+</section>
+<section class="slide">
+	<h2>Миграции</h2>
+	<a href="https://laravel.com/docs/5.8/migrations">Документация</a>
+	<p>
+		Миграции - это что-то вроде системы контроля версий для вашей базы данных.
+		Они позволяют команде программистов изменять структуру БД,
+		в то же время оставаясь в курсе изменений других участников.
+		Миграции обычно идут рука об руку с конструктором таблиц
+		для более простого обращения с архитектурой приложения.
+	</p>
+</section>
+<section class="slide">
+	<h2>Миграции</h2>
+	<pre>
+		<code>php artisan migrate // Запустить миграции</code>
+		<code>php artisan migrate:rollback // откат последней миграции</code>
+		<code>php artisan migrate:reset // откат всех изменений</code>
+		<code>php artisan migrate:refresh // reset + migrate</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Генерация миграций</h2>
+	<pre>
+		<code>php make:migration --create=tableName // с созданием таблицы</code>
+		<code>php make:migration --table=tableName // для редактирвоания таблицы</code>
+		<code>public function up()
+{
+	Schema::create('tableName', function (Blueprint $table) {
+		$table->bigIncrements('id');
+		$table->timestamps();
+	});
+}
+		</code>
+	</pre>
+	<a href="https://laravel.com/docs/5.8/migrations#columns">Возможные типы полей</a>
+</section>
+<section class="slide">
+	<h2>Seed</h2>
+	<p>
+		Seeding - механизм наполнения БД начальными данными с помощью специальных классов.
+		Все такие классы хранятся в database/seeds. Они могут иметь любое имя, но
+		следует придерживаться какой-то логики в их именовании - например, UserTableSeeder и т.д.
+		По умолчанию уже определён класс DatabaseSeeder.
+		Из этого класса можно вызывать метод call для подключения других классов с данными,
+		что позволит контролировать порядок их выполнения.
+	</p>
+</section>
+<section class="slide">
+	<h2>Seed</h2>
+	<pre>
+		<code>php artisan make:seeder UsersTableSeeder</code>
+		<code>public function run() {
+	User::create([
+		'name' => 'admin',
+		'email' => 'admin@localhost.com',
+		'password' => bcrypt('123456')
+	]);
+}
+		</code>
+		<code>DatabaseSeeder.php : $this->call(UsersTableSeeder::class);</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Seed</h2>
+	<p>Также необходимо удостовериться, что в файле DatabaseSeeder.php добавлена обработка нужных сидов:</p>
+	<pre>
+		<code>$this->call(UsersTableSeeder::class);</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Аутентицикация</h2>
+	<p>
+		Laravel позволяет сделать аутентификацию очень простой.
+		Фактически, почти всё уже готово к использованию «из коробки».
+		Настройки аутентификации находятся в файле config/auth.php.
+	</p>
+</section>
+<section class="slide">
+	<h2>Аутентицикация</h2>
+	<pre>
+		<code>php artisan make:auth</code>
+	</pre>
+	<p>"Из коробки" создаются необходимые файлы</p>
+	<ul>
+		<li>app/Http/Controllers/Auth</li>
+		<li>app/Http/Middleware/Authentificate.php</li>
+		<li>app/User.php</li>
+		<li>database/migrations/</li>
+		<li>resources/views/auth/</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Практическая работа</h2>
+	<ul>
+		<li>Добавить авторизацию</li>
+		<li>В таблицу users добавить новое текстовое поле phone</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Практическая работа 2</h2>
+	<ul>
+		<li>Добавить таблицу, модель постов (posts) с такими полями - 'title', 'text', 'user_id'</li>
+		<li>Сделать seeder для наполнения постов, создать 2-3 начальных поста</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Практическая работа 3</h2>
+	<ul>
+		<li>Вывести посты на сайте</li>
+	</ul>
+</section>
+<p class="badge">
+	<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+</p>
+<!--
+    To hide progress bar from entire presentation
+    just remJove “progress” element.
+-->
+<div class="progress"></div>
+<script src="shower/shower.min.js"></script>
+<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
