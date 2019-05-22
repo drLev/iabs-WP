@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/screen-16x10.css">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/my.css">
+<body class="shower list">
+<header class="caption">
+	<h1>Shower Presentation Engine</h1>
+	<p>Yours Truly, Famous Inc.</p>
+</header>
+<section class="slide" id="cover">
+	<h2>День 22</h2>
+	<img src="pictures/iabs2.jpg" alt="" class="cover">
+	<!--
+        To apply styles to the certain slides
+        set slide ID to get needed elements
+    -->
+	<style>
+		.corp-cube {
+			background-color: #FEDB37;
+			width: 300px;
+			height: 300px;
+			padding: 10px;
+			margin: 0 auto;
+		}
+		.corp-bgc {
+			background-color: #FEDB37;
+		}
+		#cover {
+			background-color: #FEDB37;
+		}
+		#cover h2 {
+			margin:30px 0 0;
+			color:#FFF;
+			text-align:center;
+			font-size:70px;
+		}
+	</style>
+</section>
+<section class="slide black" id="cover">
+	<style>
+		#cover h2 {
+			color: rgba(255, 255, 255, .7);
+		}
+	</style>
+	<h2 class="shout">Javascript</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
+</section>
+<section class="slide">
+	<h2>Практическая работа</h2>
+	<a href="https://codepen.io/drlev/pen/zQpraK" target="_blank">Список дел</a>
+	<ul>
+		<li>При нажатии на кнопку брать значение с текстового поля и добавлять его в контейнер</li>
+		<li>Сделать возможность добавлять пункты в список при нажатии клавиши Enter</li>
+		<li>Соблюсти принцип DRY</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Асинхронное программирование</h2>
+	<img src="pictures/js_async.png"/>
+</section>
+<section class="slide">
+	<h2>Асинхронное программирование</h2>
+	<pre>
+		<code>var func = function(name) {</code>
+		<code>	alert("Привет " + name); }</code>
+		<code>}</code>
+		<code>var timerId = setTimeout(func, 1000, "Люся");</code>
+		<code>func("Таня")</code>
+	</pre>
+	<p>
+		<b>setTimeout</b> - асинхронная функция<br/>
+		<b>func</b> - callback функция
+	</p>
+</section>
+<section class="slide">
+	<h2>Events Loop</h2>
+	<img src="pictures/day23/eventloop.jpg" style="float: left; margin: 7px 7px 7px 0; width: 300px;" />
+	<p>
+		Браузер все вызываемые функции складывает в специальное хранилище и процесс
+		под названием Event Loop достает их по очереди и выполняет если настало их время.
+		На самом деле, когда в браузере происходит событие, ваш обработчик сначала помещается
+		в очередь и уже затем выполняется.
+	</p>
+</section>
+<section class="slide">
+	<h2>Callbacks</h2>
+	<img src="pictures/js_callback.jpg"/>
+</section>
+<section class="slide">
+	<h2>Callbacks</h2>
+	<pre>
+		<code>var callbackFunc = function(){
+	alert("Функция first выполнена");
+}
+var firstFunc = function (callback) {
+	var i = 2 + 2;
+	callback();
+}
+firstFunc(callbackFunc);
+		</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Callbacks</h2>
+	<p>Неосторожное программирование с использованием колбеков может родить так называемый колбек хелл.</p>
+	<pre>
+<code>step1(function(result1) {</code>
+<code>	step2(function(result2) {</code>
+<code>		step3(function(result3) {...});</code>
+<code>	});</code>
+<code>});</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Практическая работа</h2>
+	<ul>
+		<li>Вывести сообщение привет с таймаутом 5 секунд</li>
+		<li>Написать функцию hello(name), которая приветствует имя, поприветствуйте себя с задержкой</li>
+		<li>Поставить вывод сообщения Привет с задержкой в 5 секунд. И запустить с задержкой в 3 секунды отмену вывода сообщения Привет</li>
+		<li>Зная про Event Loop что вы можете сказать о времени задержки?</li>
+	</ul>
+	<a href="https://codepen.io/vromnichev24/pen/pWroKd">Решение</a>
+</section>
+<section class="slide">
+	<h2>setInterval</h2>
+	<p>Функция setInterval позволяет повторять определенное действие с определенным интервалом.</p>
+	<pre>
+		<code>var intervalId = setInterval(func, delay[, arg1, arg2...]);</code>
+		<code>clearInterval(intervalId); // остановить выполнение</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Практическая работа</h2>
+	<ul>
+		<li>Выводить Привет каждые 5 секунд</li>
+		<li>Написать секундомер для сайта</li>
+		<li>Написать обратный отсчет секунд начиная со 100, когда закончится время вывести Привет</li>
+		<li>Написать секундомер для сайта и остановить его через 40 секунд</li>
+	</ul>
+	<a href="https://codepen.io/vromnichev24/pen/borGmq">Решение</a>
+</section>
+<section class="slide black" id="cover">
+	<style>
+		#cover h2 {
+			color: rgba(255, 255, 255, .7);
+		}
+	</style>
+	<h2 class="shout">Laravel</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
+</section>
+<section class="slide">
+	<h2>Админка</h2>
+	<p>
+		Админка - отдельный инструмент в веб приложении, главной целью которого является управление данными
+		и настройками сайта, магазина, блога, и т.д.<br />
+		Существует множество уже готовых laravel-пакетов админок и генераторов админки.
+		В интернете можно поискать рейтинги и отзывы по разным админкам, но мы будем использовать
+		<a href="https://github.com/z-song/laravel-admin">encore/laravel-admin</a>
+	</p>
+</section>
+<section class="slide">
+	<h2>Установка</h2>
+	<a href="http://laravel-admin.org/docs/#/?id=installation">Документация</a>
+	<pre>
+		<code>composer require encore/laravel-admin</code>
+		<code>php artisan vendor:publish --provider=
+			"Encore\Admin\AdminServiceProvider"</code>
+		<code>php artisan admin:install</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Добавление постов в админку</h2>
+	<a href="http://laravel-admin.org/docs/#/en/quick-start">Документация</a>
+	<pre>
+		<code>php artisan admin:make PostController --model=App\Post</code>
+		<code lang="php">$router->resource('posts', PostController::class);</code>
+	</pre>
+	<p>Не забыть добавить в меню новый пункт.</p>
+</section>
+<section class="slide">
+	<h2>Практическая работа</h2>
+	<ul>
+		<li>Добавить посты в админку</li>
+		<li>Включить пагинацию в постах</li>
+		<li>Переделать фильтр на title и text</li>
+	</ul>
+</section>
+<section class="slide">
+	<h2>Домашнее задание</h2>
+	<ul>
+		<li>JavaScript - задачник, день 22</li>
+		<li>Laravel - поискать другие админки</li>
+		<li>Попробовать пару админок, попробовать сделать в других админках редактор постов, как на практической работе</li>
+	</ul>
+</section>
+<p class="badge">
+	<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+</p>
+<!--
+    To hide progress bar from entire presentation
+    just remJove “progress” element.
+-->
+<div class="progress"></div>
+<script src="shower/shower.min.js"></script>
+<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
