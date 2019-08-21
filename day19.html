@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/screen-16x10.css">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/my.css">
+<body class="shower list">
+<header class="caption">
+	<h1>Shower Presentation Engine</h1>
+	<p>Yours Truly, Famous Inc.</p>
+</header>
+<section class="slide" id="cover">
+	<h2>День 19</h2>
+	<img src="pictures/iabs2.jpg" alt="" class="cover">
+	<!--
+        To apply styles to the certain slides
+        set slide ID to get needed elements
+    -->
+	<style>
+		.corp-cube {
+			background-color: #FEDB37;
+			width: 300px;
+			height: 300px;
+			padding: 10px;
+			margin: 0 auto;
+		}
+		.corp-bgc {
+			background-color: #FEDB37;
+		}
+		#cover {
+			background-color: #FEDB37;
+		}
+		#cover h2 {
+			margin:30px 0 0;
+			color:#FFF;
+			text-align:center;
+			font-size:70px;
+		}
+	</style>
+</section>
+<section class="slide">
+	<h2>Дипломный проект</h2>
+	<ol>
+		<li>Сделать сайт на фреймворке Laravel
+			<ul>
+				<li>блог</li>
+				<li>багтрекер</li>
+				<li>сайт онлайн бронирования столиков в кафе</li>
+				<li>сайт преподавателя для контроля домашних заданий</li>
+			</ul>
+		</li>
+		<li>Сверстать макет и натянуть на вордпресс (самостоятельное изучение)</li>
+		<li>Сверстать макет использовать javascript</li>
+		<li>...</li>
+	</ol>
+</section>
+<section class="slide black" id="cover">
+	<style>
+		#cover h2 {
+			color: rgba(255, 255, 255, .7);
+		}
+	</style>
+	<h2 class="shout">SQL</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
+</section>
+<section class="slide">
+	<h2>Самостоятельная работа</h2>
+	<ol>
+		<li>Вывести клиентов, отсортировать по фамилии</li>
+		<li>Вывести клиентов, отсортировать по фамилии и имени</li>
+		<li>Вывести список Фамилия, Сумма счета отсортировать по фамилии и по убыванию по сумме счетов</li>
+		<li>Вывести сумму счетов по городам, отсортировать по убыванию суммы счетов</li>
+		<li>Вывести в одну колонку все фамилии, все имена, все названия городов</li>
+		<li>Убрать дубли в предыдущей задачи</li>
+	</ol>
+</section>
+<section class="slide black" id="cover">
+	<style>
+		#cover h2 {
+			color: rgba(255, 255, 255, .7);
+		}
+	</style>
+	<h2 class="shout">Javascript</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
+</section>
+<section class="slide">
+	<h2>Javascript</h2>
+	<p>
+		Javascript или ECMAScript - это язык, который не обязательно должен работать в браузере.
+		Есть варианты языка которые работают на сервере или в микроконтроллерах (Node.js, johnny-five).
+		<br />
+		JS - это ООП язык
+	</p>
+
+	<code>$obj->method(); // php</code><br />
+	<code>obj.method();   // js</code>
+
+</section>
+<section class="slide">
+	<h2>Объекты javascript в браузере</h2>
+	<p>
+		Когда js работает в браузере у него есть ряд уже инициализированных объектов.
+		Главный объект станицы - это window, он включает в себя все остальные. Поэтому его
+		можно упускать при обращении.<br />
+		Все объекты в window делят на три группы - DOM(Document Object Model), BOM (Browser Object
+		Model) и объекты языка Javascript.
+	</p>
+</section>
+<section class="slide">
+	<h2>Объекты javascript в браузере</h2>
+	<p style="text-align: center;">
+		<img src="pictures/day19/js-objetcs.png" alt="" style="height: 420px;">
+	</p>
+</section>
+<section class="slide">
+	<h2>Практическая работа</h2>
+	<pre>
+		<code>window</code>
+		<code>history</code>
+		<code>history.back()</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>DOM дерево</h2>
+	<p>DOM - объектная модель документа представляет HTML дерево в виде объектов,
+		доступных для изменения через JavaScript.</p>
+	<p style="text-align: center;">
+		<img src="pictures/day19/DOM.jpg" alt="" style="height: 275px;">
+	</p>
+</section>
+
+<section class="slide">
+	<h2>DOM дерево</h2>
+	<pre>
+		<code>//JS</code>
+		<code>document</code>
+		<code>document.documentElement</code>
+		<code>document.body</code>
+		<code>document.body.style</code>
+		<code>document.body.style.backgroundColor</code>
+	</pre>
+</section>
+<section class="slide">
+	<h2>Практическая работа (разобрать)</h2>
+	<a href="https://codepen.io/drlev/pen/wvwogZp">https://codepen.io/drlev/pen/wvwogZp</a>
+	<ol>
+		<li>Поиск по id</li>
+		<li>Поиск по тегу</li>
+		<li>Поиск по CSS селектору querySelectorAll, querySelector</li>
+	</ol>
+</section>
+<section class="slide black" id="cover">
+	<style>
+		#cover h2 {
+			color: rgba(255, 255, 255, .7);
+		}
+	</style>
+	<h2 class="shout">Laravel</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
+</section>
+<section class="slide">
+	<h2>Самостоятельная работа</h2>
+	<ol>
+		<li>Создайте новый Laravel проект test</li>
+		<li>Создайте роут на страницу post</li>
+		<li>Создайте контроллер AboutController с методом index</li>
+		<li>Создайте роут на страниу about с использованием AboutController</li>
+		<li>Установить модуль аутентификации (php artisan make:auth)
+		<li>Выполнить миграции</li>
+	</ol>
+</section>
+<section class="slide">
+	<h2>Самостоятельная работа 2</h2>
+	<ol>
+		<li>Создайте новый репозиторий на github</li>
+		<li>Привязать текущий код проекта test к репозиторию</li>
+		<li>Выложить весь код в репозиторий</li>
+		<li>Внести любые изменения в проект и вылолжить на репозиторий</li>
+	</ol>
+</section>
+<section class="slide">
+	<h2>Шаблоны</h2>
+	<p>
+		Существует масса платных и бесплатных шаблонов html/css, почти все из них можно установить на Laravel проект.<br />
+		Для этого необходимо выделить все основные страницы шаблона,
+		например, главная страница, личный кабинет, форма аутентицикации, и т.д.,
+		и создать для каждой страницы роут и представление в resources/views
+	</p>
+</section>
+<section class="slide">
+	<h2>Шаблоны. Дополнительные файлы (CSS, JS, img,...)</h2>
+	<p>
+		Практически все шаблоны имеют свои дополнительные CSS, JS файлы и картинки.<br />
+		Если в проекте не предусмотрено несколько вариантов шаблонов,
+		то можно все дополнительные файлы переместить в папку public.<br />
+		Но, если шаблонов может быть несколько, шаблон для админки, шаблон для магазина,
+		шаблон для блога и т.д., то необходимо в папке public создавать отдельные папки и уже в них хранить.
+	</p>
+</section>
+<section class="slide">
+	<h2>Практическая работа</h2>
+	<ol>
+		<li>Установить шаблон <a href="https://startbootstrap.com/themes/clean-blog/">Clean Blog</a></li>
+	</ol>
+	<p style="text-align: center;">
+		<img src="pictures/day19/clean-blog.png" alt="" style="height: 325px;">
+	</p>
+</section>
+<section class="slide">
+	<h2>Домашнее задание</h2>
+	<p>Задачник День 19</p>
+	<p>Прочесть <a href="https://git-scm.com/book/ru/v1/">документацию</a> git</p>
+	<p>Скачать дома проект test с репозитория</p>
+	<p>Внести правки в проект, выложить оббратно в github</p>
+	<p>Прочитать <a href="https://laravel.ru/docs/v5/migrations">документацию</a> по миграциям </p>
+	<p>По уроку установить шаблон про <a href="http://cccp-blog.com/laravel/laravel-views-i-laravel-blade">уроку</a>,
+		выложить на github и отправить мне ссылку</p>
+</section>
+<p class="badge">
+	<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+</p>
+<!--
+    To hide progress bar from entire presentation
+    just remJove “progress” element.
+-->
+<div class="progress"></div>
+<script src="shower/shower.min.js"></script>
+<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
