@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/screen-16x10.css">
+	<link rel="stylesheet" href="shower/themes/iabs/styles/my.css">
+
+	<style type="text/css">
+		.corp-cube {
+			background-color: #FEDB37;
+			width: 300px;
+			height: 300px;
+			padding: 10px;
+			margin: 0 auto;
+		}
+		.corp-bgc {
+			background-color: #FEDB37;
+		}
+		#cover {
+			background-color: #FEDB37;
+		}
+		#cover h2 {
+			margin:30px 0 0;
+			color:#FFF;
+			text-align:center;
+			font-size:70px;
+		}
+		#cover h2 {
+			color: rgba(255, 255, 255, .7);
+		}
+	</style>
+</head>
+<body class="shower list">
+<header class="caption">
+	<h1>Shower Presentation Engine</h1>
+	<p>Yours Truly, Famous Inc.</p>
+</header>
+<section class="slide" id="cover">
+	<h2>День 21</h2>
+	<img src="pictures/iabs2.jpg" alt="" class="cover">
+	<!--
+        To apply styles to the certain slides
+        set slide ID to get needed elements
+    -->
+</section>
+<section class="slide black" id="cover">
+	<h2 class="shout">Laravel</h2>
+	<img src="pictures/code.jpg" alt="" class="cover">
+</section>
+<section class="slide">
+	<h2>Самостоятельная работа</h2>
+	<ol>
+		<li>Подготовить проект - склонировать из github, запустить</li>
+		<li>Создать контроллеры <b>HomeController</b>, <b>PostController</b>, <b>AboutController</b>, <b>ContactController</b> с методом index в каждом</li>
+		<li>Создать <b>именованные</b> роуты на "/" (home), "/post", "/about", "/contact"<br />
+			<a href="https://laravel.com/docs/5.8/routing#named-routes" target="_blank">Документация</a>
+		</li>
+		<li>Обработку роутов настроить на соответствующие контроллеры, на метод index</li>
+
+	</ol>
+</section>
+<section class="slide">
+	<h2>Практическая работа (почти)</h2>
+	<p>
+		В шаблоне заменить все ссылки на правильные роуты, используя {{route(ROUTE_NAME)}}.
+	</p>
+</section>
+<section class="slide">
+	<h2>Layout (лэйаут)</h2>
+	<p>
+		Layout (лэйаут) - расположение элементов и блоков относительно друг друга в рамках страницы или интерфейса.<br/>
+	</p>
+	<p>
+		В Laravel встроен шаблонизатор Blade, который позволяет настривать layout страницы по блокам, при этом каждый блок может быть переопределен.
+	</p>
+</section>
+<section class="slide">
+	<h2>Layout (лэйаут)</h2>
+	<img src="pictures/day21/layout.png" width="600px">
+</section>
+<section class="slide">
+	<h2>Blade, Layout</h2>
+	<p>
+		Для натсройки layout необходимо определить основные секции страницы, и вынести их в отдельные файлы, например меню, шапка, внутренний блок контента, футер, и т.д.<br/>
+		В каждой секции, если необходимо переопределять данные, можно использовать директивы @yield или @section.<br/>
+	</p>
+	<a href="https://laravel.com/docs/5.8/blade">Документация</a>
+</section>
+<section class="slide">
+	<h2>Blade, Layout</h2>
+	<p>
+		В дочерних шаблонах переопределение данных выполняется с помощью директивы @section(NAME) ... @endsection
+	</p>
+	<a href="https://laravel.com/docs/5.8/blade">Документация</a>
+</section>
+<section class="slide">
+	<h2>Практическая работа</h2>
+	<p>
+		Разбить страницу на блоки - шапка, меню, контент, футер.
+	</p>
+</section>
+<section class="slide">
+	<h2></h2>
+	<p>
+		Не забыть все выложить в гитхаб
+	</p>
+</section>
+<section class="slide">
+	<h2>Домашнее задание</h2>
+	<ul>
+		<li>Почитать про <a href="https://laravel.com/docs/5.7/blade#components-and-slots">компоненты</a>.</li>
+		<li>Создать форму добавления нового поста.</li>
+		<li>Добавить проверку авторизации в форму добавления поста.</li>
+	</ul>
+</section>
+<p class="badge">
+	<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+</p>
+<!--
+    To hide progress bar from entire presentation
+    just remJove “progress” element.
+-->
+<div class="progress"></div>
+<script src="shower/shower.min.js"></script>
+<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
